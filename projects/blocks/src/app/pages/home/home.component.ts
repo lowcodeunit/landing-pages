@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';import { LCUServiceSettings } from '@lcu/common';
-;
-
+import { Component, OnInit } from '@angular/core';
+import { LCUServiceSettings } from '@lcu/common';
 @Component({
   selector: 'lcu-home',
   templateUrl: './home.component.html',
@@ -12,8 +11,7 @@ export class HomeComponent implements OnInit {
   //  Properties
 
   //  Constructors
-  constructor(protected settings: LCUServiceSettings) {
-  }
+  constructor(protected settings: LCUServiceSettings) {}
 
   //  Life Cycle
   public ngOnInit(): void {}

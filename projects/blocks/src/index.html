@@ -1,35 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Fathym | The Data Application Framework</title>
-  <base href="/" />
+  <head>
+    <meta charset="utf-8" />
+    <title>Fathym | The Data Application Framework</title>
+    <base href="/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link
-    href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet"
-  />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
 
-  <script id="lcu-reg">
-    window.LCU = {
-      // APIRoot: "https://localhost:44387",
-      APIRoot: "https://www.fathym-int.com",
-      Application: {
-      },
-      State: {
-        ActionRoot: "/api/state",
-        Root: "/api/state",
-        // Environment: 'local',
-        UsernameMock: 'george.hatch@fathym.com',
-        LandingPage: {}
-      },
-      Settings: {
-      }
-    };
-  </script>
-</head>
-<body>
-  <lcu-root></lcu-root>
-</body>
+    <script id="lcu-reg">
+      window.LCU = {
+        // APIRoot: "https://localhost:44387",
+        APIRoot: "https://www.fathym-int.com",
+        Application: {
+        },
+        State: {
+          ActionRoot: "/api/state",
+          Root: "/api/state",
+          // Environment: 'local',
+          UsernameMock: 'shannon.bruns@fathym.com',
+          Toolbar = {
+            Title: 'IoT Ensemble Beta',
+            Logo: './assets/logo.svg',
+            Actions: [
+              {
+                Text: 'Docs',
+                Path: '/docs',
+                Align: 'start',
+                Target: '_blank',
+              },
+              {
+                Text: 'Sign Out',
+                Path: '/.oauth/logout',
+                Align: 'end',
+              },
+            ],
+          },
+          LandingPage: {}
+        },
+        Settings: {
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <lcu-root></lcu-root>
+  </body>
 </html>
