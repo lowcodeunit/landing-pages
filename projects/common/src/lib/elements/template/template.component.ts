@@ -1,19 +1,19 @@
-import { TemplateConfigModel } from './../../models/template-config.model';
+import { LandingPageConfig } from '../../models/landing-page-config.model';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'lcu-template',
+  selector: 'lcu-landingpage-template',
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.scss']
 })
-export class TemplateComponent implements OnInit {
+export class LandingPageTemplateComponent implements OnInit {
 
   /**
    * Template configuration
    */
-  private _config: TemplateConfigModel;
+  private _config: LandingPageConfig;
   @Input('config')
-  set Config(val: TemplateConfigModel) {
+  set Config(val: LandingPageConfig) {
     if (!val) {
       return;
     }
@@ -21,7 +21,7 @@ export class TemplateComponent implements OnInit {
     this._config = val;
 
   }
-  get Config(): TemplateConfigModel {
+  get Config(): LandingPageConfig {
 
     if (!this._config) {
       return;

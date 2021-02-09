@@ -3,6 +3,6 @@
 * created variant theme color classes
 */
 @import "../../common/assets/common-theme";
-@include theme-setup($global-theme);
+// @include theme-setup($global-theme);
 
-$Fathym-Green: mat-color(map-get($global-theme, primary), A700);
+// $Fathym-Green: mat-color(map-get($global-theme, primary), A700);

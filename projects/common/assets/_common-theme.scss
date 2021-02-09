@@ -22,6 +22,21 @@ $global-background: map-get(map-get($global-theme, background), 'background');
 */
 @include theme-setup($global-theme);
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    background: radial-gradient(#525252, #131313);
+}
 
 /**
 * Common styles for Napkin-IDE projects

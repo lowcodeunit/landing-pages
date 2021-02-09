@@ -1,9 +1,68 @@
-<header>
-        <nav>
-            <div class="fathym-logo"></div>
-            <ul class="nav-links">
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Tutorial</a></li>
-            </ul>
-        </nav>
-    </header>
+<div class="hero-container">
+    <div 
+        fxLayoutAlign="center center" 
+        class="hero">
+        <div class="hero-content">
+            <div 
+                fxLayout="row" 
+                fxLayoutGap="10px" 
+                class="title">
+                <h1>
+                    {{ Config?.HeroContainer.Title }}
+                </h1>
+                <span class="subtitle">
+                    {{ Config?.HeroContainer.SubTitle }}
+                </span>
+            </div>
+            <div class="hor-line"></div>
+            <p class="tagline">
+                {{ Config?.HeroContainer.Message }}
+            </p>
+        </div>
+    </div>
+    <div fxFill class="hero-background"></div>
+</div>
+
+<div fxLayoutAlign="center" class="main-container">
+    <div fxFlex="40" class="inner-container">
+        <div 
+            fxLayout="column"
+            class="card-container"
+            *ngFor="let card of Config?.InfoCards; let i = index">
+
+                <div 
+                    fxLayoutGap="10px"
+                    fxLayoutAlign="end center" 
+                    class="card">
+                    <div class="imgBx">
+                        <mat-icon>{{ card.Icon }}</mat-icon>
+                    </div>
+                    <div 
+                        fxLayout="column" 
+                        fxFlex="80"
+                        class="content">
+                        <div>
+                            <h3>{{ card.Title }}</h3>
+                            <p>{{ card.Info }}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="call-to-action">
+            <div class="hor-line"></div>
+            <div
+             fxLayout="column"
+             fxLayoutGap="10px"
+             class="content">
+                <p>{{ Config?.CallToAction.Message }}</p>
+                <button 
+                    fxFlex="30"
+                    mat-raised-button
+                    color="accent">
+                    {{ Config?.CallToAction.Label }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
