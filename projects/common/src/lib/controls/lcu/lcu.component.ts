@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { LcuModel } from '../../models/lcu.model';
 
 @Component({
   selector: 'lcu-lcu',
@@ -7,8 +6,6 @@ import { LcuModel } from '../../models/lcu.model';
   styleUrls: ['./lcu.component.scss']
 })
 export class LcuComponent implements OnInit {
-
-  @Input() public card: LcuModel;
 
   @Output() public cardSelected: EventEmitter<any>;
 
