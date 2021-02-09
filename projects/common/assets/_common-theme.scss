@@ -22,6 +22,7 @@ $global-background: map-get(map-get($global-theme, background), 'background');
 */
 @include theme-setup($global-theme);
 
+
 /**
 * Common styles for Napkin-IDE projects
 *

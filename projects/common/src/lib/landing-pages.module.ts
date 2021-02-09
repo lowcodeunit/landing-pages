@@ -5,9 +5,10 @@ import { FathymSharedModule, MaterialModule } from '@lcu/common';
 import { LcuService } from './services/lcu.service';
 import { LcuComponent } from './controls/lcu/lcu.component';
 import { LcuDirective } from './directives/lcu.directive';
+import { TemplateComponent } from './elements/template/template.component';
 
 @NgModule({
-  declarations: [LcuComponent, LcuDirective],
+  declarations: [LcuComponent, LcuDirective, TemplateComponent],
   imports: [
     FathymSharedModule,
     FormsModule,
@@ -15,8 +16,8 @@ import { LcuDirective } from './directives/lcu.directive';
     FlexLayoutModule,
     MaterialModule
   ],
-  exports: [LcuComponent, LcuDirective],
-  entryComponents: []
+  exports: [LcuComponent, LcuDirective, TemplateComponent],
+  entryComponents: [TemplateComponent]
 })
 export class LandingPagesModule {
   static forRoot(): ModuleWithProviders<LandingPagesModule> {
