@@ -2,12 +2,10 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FathymSharedModule, MaterialModule } from '@lcu/common';
-import { LcuComponent } from './controls/lcu/lcu.component';
-import { LcuDirective } from './directives/lcu.directive';
 import { TemplateComponent } from './elements/template/template.component';
 
 @NgModule({
-  declarations: [LcuComponent, LcuDirective, TemplateComponent],
+  declarations: [TemplateComponent],
   imports: [
     FathymSharedModule,
     FormsModule,
@@ -15,7 +13,7 @@ import { TemplateComponent } from './elements/template/template.component';
     FlexLayoutModule,
     MaterialModule
   ],
-  exports: [LcuComponent, LcuDirective, TemplateComponent],
+  exports: [TemplateComponent],
   entryComponents: [TemplateComponent]
 })
 export class LandingPagesModule {

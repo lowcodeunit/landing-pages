@@ -31,7 +31,7 @@
 }
 
 @mixin component-themes($theme) {
-  @include lcu-component-theme($theme);
+
 }
 
 @mixin primary-logo($logo, $theme, $opacity) {
