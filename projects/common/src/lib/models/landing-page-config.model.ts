@@ -12,7 +12,7 @@ export class LandingPageConfig {
     /**
      * Hero container items
      */
-    public HeroContainer: HeroContainerModel;
+    public Hero: HeroContainerModel;
 
     /**
      * Card info
