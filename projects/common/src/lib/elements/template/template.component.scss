@@ -1,4 +1,6 @@
-@import '../../../../assets/common-theme';
+$orange: #f12711;
+$hero-bg-color: rgb(26, 20, 32);
+$accent: #9CD8D7;
 
 p {
     font-size: 0.5em;
@@ -6,6 +8,7 @@ p {
 }
 
 .hero-container {
+   
     .hero-header {
         padding: 30px;
         background-color: $hero-bg-color;
@@ -13,7 +16,7 @@ p {
         .hero-content {
             .title {
                 h1 {
-                    color: mat-color($accent);
+                    color: $accent;
                 }
 
                 .subtitle {
@@ -36,6 +39,7 @@ p {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
+        clip-path: inset(0 0 0 0);
         -webkit-filter: blur(5px);
     }
 }

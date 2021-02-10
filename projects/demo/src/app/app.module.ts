@@ -12,8 +12,7 @@ import { LcuDocumentationModule } from '@lowcodeunit/lcu-documentation-common';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DocumentationComponent
+    AppComponent
   ],
   imports: [
     AppRoutingModule,
