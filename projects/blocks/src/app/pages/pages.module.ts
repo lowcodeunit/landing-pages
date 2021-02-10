@@ -5,10 +5,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LandingPagesModule } from '@lowcodeunit/landing-pages-common';
 import { PagesRoutingModule } from './pages-routing.module';
-// import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     FormsModule,
