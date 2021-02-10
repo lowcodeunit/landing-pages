@@ -1,96 +1,90 @@
-$primary: #4a918e;
-$accent: #9cd8d7;
-$orange: #f12711;
-$line-breaker-color: rgba($color: #ffffff, $alpha: 0.25);
-$hero-bg-color: rgb(26, 20, 32);
+@import '../../../../assets/common-theme';
+
 
 p {
     font-size: 0.5em;
     color: rgb(238, 238, 238);
 }
 
-.hero-container {
-    position: relative;
+:host {
+    .hero-container {
+        .hero-header {
+            padding: 30px;
+            background-color: $hero-bg-color;
 
-    .hero {
-        z-index: 1;
-        padding: 30px;
-        background-color: $hero-bg-color;
+            .hero-content {
+                .title {
+                    h1 {
+                        color: mat-color($accent);
+                    }
 
-        .hero-content {
-            .title {
-
-                h1 {
-                    color: $accent;
+                    .subtitle {
+                        color: white;
+                        font-size: 2em;
+                        font-weight: 200;
+                    }
                 }
 
-                .subtitle {
-                    color: white;
-                    font-size: 2em;
-                    font-weight: 200;
+                .tagline {
+                    font-size: 1em;
                 }
             }
-
-            .tagline {
-                font-size: 1em;
-            }
         }
-    }
-    .hero-background {
-        position: absolute;
-        z-index: -1;
-        height: 200px;
-        // width: 100%;
-        background-color: $hero-bg-color;
-        background-image: url("/images/daniel-vogel-sVothhm7iRI-unsplash.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        -webkit-filter: blur(5px);
-    }
-}
-
-.main-container {
-    margin-top: 20px;
-    font-size: 1.75em;
-}
-
-.card-container {
- 
-    .card {
-        position: relative;
-        min-height: 100px;
-        background: white;
-        border-radius: 5px;
-        margin: 30px 0;
-
-        .content {
-
-            h3 {
-                margin-bottom: 5px;
-                font-size: 0.85em;
-                color: $orange;
-            }
-
-            p {
-                color: black;
-            }
-        }
-
-        .imgBx {
-            width: 70px;
-            height: 70px;
-            left: -30px;
-            padding: 10px;
-            top: calc(50% - 70px);
+        .hero-background {
             position: absolute;
-            background: $orange;
-            z-index: 1;
-            border-radius: 5px;
-            overflow: hidden;
-            filter: drop-shadow(0 0 15px #333);
+            z-index: -1;
+            height: 200px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            -webkit-filter: blur(5px);
+        }
+    }
 
-            .mat-icon {color: white; font-size: 1.5em;}
+    .main-container {
+        margin-top: 20px;
+        font-size: 1.75em;
+    }
+
+    .card-container {
+        .card {
+            position: relative;
+            min-height: 100px;
+            background: white;
+            border-radius: 5px;
+            margin: 30px 0;
+
+            .content {
+                h3 {
+                    margin-bottom: 5px;
+                    font-size: 0.85em;
+                    color: $orange;
+                }
+
+                p {
+                    color: black;
+                }
+            }
+
+            .imgBx {
+                width: 70px;
+                height: 70px;
+                left: -30px;
+                padding: 10px;
+                top: calc(50% - 70px);
+                position: absolute;
+                background: $orange;
+                z-index: 1;
+                border-radius: 5px;
+                overflow: hidden;
+                filter: drop-shadow(0 0 15px #333);
+
+                .mat-icon {
+                    color: white;
+                    font-size: 1.5em;
+                }
+            }
         }
     }
 }

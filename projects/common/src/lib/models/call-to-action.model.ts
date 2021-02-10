@@ -12,6 +12,10 @@ export class CallToActionModel {
     public Label: string;
 
     /**
+     * Where to open linked document
+     */
+    public Target: string;
+    /**
      * Call to action button URL
      */
     public URL: string;

@@ -1,25 +1,24 @@
 @import '../../../node_modules/@lcu/common/assets/theming/common-theme';
-@import '../../../node_modules/@lcu/common/assets/styles/fathym-global.styles';
+@import '../../../node_modules/@lcu/common/assets/styles/utils/margins-padding';
+@import '../../../node_modules/@lcu/common/assets/styles/utils/fathym-cursors';
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
 $global-theme: fathym-ivy-theme(true);
 
-// :root {
-//     --global-theme: $global-theme;
-    
-// }
+$primary: map-get($global-theme, primary);
+$accent: map-get($global-theme, accent);
+$warn: map-get($global-theme, warn);
 
-/**
-* Or, can call create-theme and pass in your own palatte colors
-*/
-// $global-theme: create-theme($fathym-primary, $fathym-accent, $fathym-warn, true);
-$global-background: map-get(map-get($global-theme, background), 'background');
+$orange-accent: map-get($mat-orange, 500);
+$green-accent: map-get($mat-green, 400);
+$yellow-accent: map-get($mat-yellow, 600);
 
-/**
-* Set the theme and generate dynamic variant theme classes,
-* theme-setup is inside of Ref Arch (common-theme)
-*
-* If we skip this @include, the default theme is 'fathym-ivy-theme'
-*/
+$divider-size: 5px;
+$divider: mat-color($primary);
+
+$orange: #f12711;
+$hero-bg-color: rgb(26, 20, 32);
+
 @include theme-setup($global-theme);
 
 * {
@@ -38,15 +37,24 @@ body {
     background: radial-gradient(#525252, #131313);
 }
 
-/**
-* Common styles for Napkin-IDE projects
-*
-* If this starts to get big, think about moving these to another stylesheet
-*/
-.spinner-logo {
-    position: absolute;
-    background-image: fathym-logo(thinky-logo,black, 1 );
-    height: 50px !important;
-    width: 50px !important;
-    background-repeat:no-repeat;
+.divider-fill-vert {
+    background-color: $divider;
+    min-height: 100%;
+    top:10%;
+    bottom:10%;
+    min-width: $divider-size;
 }
+
+.divider-fill-hor {
+    background-color: $divider;
+    height: $divider-size;
+    width: 100%;
+}
+
+// .spinner-logo {
+//     position: absolute;
+//     background-image: fathym-logo(thinky-logo,black, 1 );
+//     height: 50px !important;
+//     width: 50px !important;
+//     background-repeat:no-repeat;
+// }

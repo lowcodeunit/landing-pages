@@ -1,67 +1,52 @@
 <div class="hero-container">
-    <div 
-        fxLayoutAlign="center center" 
-        class="hero">
+    <div fxLayoutAlign="center center" class="hero-header">
         <div class="hero-content">
-            <div 
-                fxLayout="row" 
-                fxLayoutGap="10px" 
-                class="title">
+            <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" class="title">
                 <h1>
-                    {{ Config?.HeroContainer.Title }}
+                    {{ Config?.Hero.Title }}
                 </h1>
                 <span class="subtitle">
-                    {{ Config?.HeroContainer.SubTitle }}
+                    {{ Config?.Hero.SubTitle }}
                 </span>
             </div>
-            <div class="hor-line"></div>
+            <div class="divider-fill-hor margin-top-4 margin-bottom-4"></div>
             <p class="tagline">
-                {{ Config?.HeroContainer.Message }}
+                {{ Config?.Hero.Message }}
             </p>
         </div>
     </div>
-    <div fxFill class="hero-background"></div>
+    <div class="hero-background" [style.background-image]="'url('+Config.Hero.BackgroundImage+')'">
+    </div>
 </div>
 
 <div fxLayoutAlign="center" class="main-container">
     <div fxFlex="40" class="inner-container">
-        <div 
-            fxLayout="column"
-            class="card-container"
-            *ngFor="let card of Config?.InfoCards; let i = index">
-
-                <div 
-                    fxLayoutGap="10px"
-                    fxLayoutAlign="end center" 
-                    class="card">
-                    <div class="imgBx">
-                        <mat-icon>{{ card.Icon }}</mat-icon>
-                    </div>
-                    <div 
-                        fxLayout="column" 
-                        fxFlex="80"
-                        class="content">
-                        <div>
-                            <h3>{{ card.Title }}</h3>
-                            <p>{{ card.Info }}</p>
-                        </div>
+        <div fxLayout="column" class="card-container" *ngFor="let card of Config?.InfoCards; let i = index">
+            <div fxLayoutGap="10px" fxLayoutAlign="end center" class="card">
+                <div class="imgBx">
+                    <mat-icon>{{ card.Icon }}</mat-icon>
+                </div>
+                <div fxLayout="column" fxFlex="80" class="content">
+                    <div>
+                        <h3>{{ card.Title }}</h3>
+                        <p>{{ card.Info }}</p>
                     </div>
                 </div>
+            </div>
         </div>
 
-        <div class="call-to-action">
-            <div class="hor-line"></div>
-            <div
-             fxLayout="column"
-             fxLayoutGap="10px"
-             class="content">
-                <p>{{ Config?.CallToAction.Message }}</p>
-                <button 
-                    fxFlex="30"
-                    mat-raised-button
-                    color="accent">
-                    {{ Config?.CallToAction.Label }}
-                </button>
+        <div class="divider-fill-hor margin-top-4 margin-bottom-4"></div>
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" class="content">
+            <p>{{ Config?.CallToAction.Message }}</p>
+            <div>
+                <a color="accent" 
+                    mat-raised-button 
+                    href="{{ Config?.CallToAction.URL }}" 
+                    target="{{Config?.CallToAction.Target}}">
+                    <div class="margin-right-2 margin-left-2">
+                        {{ Config?.CallToAction.Label }}
+                    </div> 
+                </a>
             </div>
         </div>
     </div>
