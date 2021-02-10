@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';import { LCUServiceSettings } from '@lcu/common';
-;
-
+import { CallToActionModel } from './../../../../../common/src/lib/models/call-to-action.model';
+import { Component, OnInit } from '@angular/core';
+import { LCUServiceSettings } from '@lcu/common';
+import { HeroContainerModel, InfoCardModel, LandingPageConfig } from '@lowcodeunit/landing-pages-common';
 @Component({
   selector: 'lcu-home',
   templateUrl: './home.component.html',
@@ -10,15 +11,23 @@ export class HomeComponent implements OnInit {
   //  Fields
 
   //  Properties
+  public Config: LandingPageConfig;
 
   //  Constructors
-  constructor(protected settings: LCUServiceSettings) {
-  }
+  constructor(protected settings: LCUServiceSettings) {}
 
   //  Life Cycle
-  public ngOnInit(): void {}
+  public ngOnInit(): void {
+
+    this.setConfig();
+  }
 
   //  API Methods
 
   //  Helpers
+
+  protected setConfig(): void {
+
+    this.Config = this.settings.State.LandingPage;
+  }
 }

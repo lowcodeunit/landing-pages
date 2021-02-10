@@ -1,3 +1,4 @@
+import { LandingPagesModule } from '@lowcodeunit/landing-pages-common';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -6,15 +7,13 @@ import { FathymSharedModule, MaterialModule } from '@lcu/common';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './controls/home/home.component';
-import { DocumentationComponent } from './controls/documentation/documentation.component';
 import { LcuDocumentationModule } from '@lowcodeunit/lcu-documentation-common';
-import { LandingPagesModule } from '@lowcodeunit/landing-pages-common';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    DocumentationComponent
+    HomeComponent
   ],
   imports: [
     AppRoutingModule,

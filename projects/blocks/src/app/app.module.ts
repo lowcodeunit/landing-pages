@@ -6,8 +6,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LandingPagesModule } from '@lowcodeunit/landing-pages-common';
-import { AppRoutingModule } from '../../../demo/src/app/app-routing.module';
 import { environment } from '../environments/environment';
+import { AppRoutingModule } from './app-routing.module';
+import { AppHostModule } from '@lowcodeunit/app-host-common';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,6 +21,7 @@ import { environment } from '../environments/environment';
     FormsModule,
     AppRoutingModule,
     LandingPagesModule,
+    AppHostModule
   ],
   providers: [
     {
