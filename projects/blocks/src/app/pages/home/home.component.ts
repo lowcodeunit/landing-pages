@@ -1,7 +1,7 @@
 import { CallToActionModel } from './../../../../../common/src/lib/models/call-to-action.model';
 import { Component, OnInit } from '@angular/core';
 import { LCUServiceSettings } from '@lcu/common';
-import { HeroContainerModel, InfoCardModel, LandingPageConfig } from '@lowcodeunit/landing-pages-common';
+import { LandingPageConfig } from '@lowcodeunit/landing-pages-common';
 @Component({
   selector: 'lcu-home',
   templateUrl: './home.component.html',

@@ -19,8 +19,8 @@ import { HomeComponent } from './home/home.component';
     LandingPagesModule,
     PipeModule,
   ],
-  exports: [HomeComponent],
+  exports: [],
   providers: [],
-  entryComponents: [HomeComponent],
+  entryComponents: [],
 })
 export class PagesModule {}

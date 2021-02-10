@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { LCUServiceSettings } from '@lcu/common';
 // import { AppHostToolbarState } from '@lowcodeunit/app-host-common';
 
+// lowcodeunit/app-host
+
 @Component({
   selector: 'lcu-root',
   templateUrl: './app.component.html',
