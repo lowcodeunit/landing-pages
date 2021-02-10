@@ -1,7 +1,7 @@
 <div class="hero-container">
     <div fxLayoutAlign="center center" class="hero-header">
         <div class="hero-content">
-            <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px" class="title">
+            <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="10px" class="title">
                 <h1>
                     {{ Config?.Hero.Title }}
                 </h1>
@@ -36,8 +36,7 @@
         </div>
 
         <div class="divider-fill-hor margin-top-4 margin-bottom-4"></div>
-        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="end center" fxLayoutGap="10px"
-        style="background-color: blueviolet;">
+        <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center end" fxLayoutGap="10px">
             <p>{{ Config?.CallToAction.Message }}</p>
             <div>
                 <a color="accent" 
