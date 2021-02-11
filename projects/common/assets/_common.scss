@@ -1,10 +1,8 @@
 @import '../../../node_modules/@lcu/common/assets/theming/common-theme';
 @import '../../../node_modules/@lcu/common/assets/styles/utils/margins-padding';
 @import '../../../node_modules/@lcu/common/assets/styles/utils/fathym-cursors';
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 $global-theme: fathym-ivy-theme(true);
-@include theme-setup($global-theme);
 
 $primary: map-get($global-theme, primary);
 $accent: map-get($global-theme, accent);
@@ -28,12 +26,14 @@ $hero-bg-color: rgb(26, 20, 32);
 }
 
 body {
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
     overflow: hidden;
     overflow-y: scroll;
     background: radial-gradient(#525252, #131313);
+}
+
+.accent-font-color {
+    color: mat-color($accent);
 }
 
 .divider-fill-vert {

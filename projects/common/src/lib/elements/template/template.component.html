@@ -2,7 +2,7 @@
     <div fxLayoutAlign="center center" class="hero-header">
         <div class="hero-content">
             <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="10px" class="title">
-                <h1>
+                <h1 class="accent-font-color">
                     {{ Config?.Hero.Title }}
                 </h1>
                 <span class="subtitle">
@@ -15,7 +15,8 @@
             </p>
         </div>
     </div>
-    <div class="hero-background" [style.background-image]="'url('+Config.Hero.BackgroundImage+')'">
+    <div class="hero-background" 
+        [style.background-image]="'url('+Config.Hero.BackgroundImage+')'">
     </div>
 </div>
 
@@ -39,13 +40,11 @@
         <div fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center end" fxLayoutGap="10px">
             <p>{{ Config?.CallToAction.Message }}</p>
             <div>
-                <a color="accent" 
-                    mat-raised-button 
-                    href="{{ Config?.CallToAction.URL }}" 
+                <a color="accent" mat-raised-button href="{{ Config?.CallToAction.URL }}"
                     target="{{Config?.CallToAction.Target}}">
                     <div class="margin-right-2 margin-left-2">
                         {{ Config?.CallToAction.Label }}
-                    </div> 
+                    </div>
                 </a>
             </div>
         </div>
