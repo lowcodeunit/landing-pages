@@ -1,19 +1,28 @@
+import { Component, OnInit, Injector, Input } from '@angular/core';
+import { LCUElementContext, LcuElementComponent } from '@lcu/common';
 import { LandingPageConfig } from '../../models/landing-page-config.model';
-import { Component, Input, OnInit } from '@angular/core';
+
+export class LandingPagesTemplateElementState {}
+
+export class LandingPagesTemplateContext extends LCUElementContext<LandingPagesTemplateElementState> {}
+
+export const SELECTOR_LANDING_PAGES_TEMPLATE_ELEMENT = 'landing-pages-template-element';
 
 @Component({
-  selector: 'lcu-landingpage-template',
+  selector: SELECTOR_LANDING_PAGES_TEMPLATE_ELEMENT,
   templateUrl: './template.component.html',
   styleUrls: ['./template.component.scss']
 })
-export class LandingPageTemplateComponent implements OnInit {
-
+export class LandingPagesTemplateElementComponent extends LcuElementComponent<LandingPagesTemplateContext> implements OnInit {
+  //  Fields
   /**
    * Template configuration
    */
-  private _config: LandingPageConfig;
+  protected _config: LandingPageConfig;
+
+  //  Properties
   @Input('config')
-  set Config(val: LandingPageConfig) {
+  public set Config(val: LandingPageConfig) {
     if (!val) {
       return;
     }
@@ -21,7 +30,8 @@ export class LandingPageTemplateComponent implements OnInit {
     this._config = val;
 
   }
-  get Config(): LandingPageConfig {
+
+  public get Config(): LandingPageConfig {
 
     if (!this._config) {
       return;
@@ -29,9 +39,18 @@ export class LandingPageTemplateComponent implements OnInit {
     return this._config;
   }
 
-  constructor() { }
 
-  ngOnInit(): void {
+  //  Constructors
+  constructor(protected injector: Injector) {
+    super(injector);
   }
 
+  //  Life Cycle
+  public ngOnInit() {
+    super.ngOnInit();
+  }
+
+  //  API Methods
+
+  //  Helpers
 }

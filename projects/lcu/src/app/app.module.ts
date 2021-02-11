@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
+import { NgModule, DoBootstrap, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FathymSharedModule, LCUServiceSettings } from '@lcu/common';
 import { environment } from '../environments/environment';
-import { LandingPagesModule } from '@lowcodeunit/landing-pages-common';
+import { LandingPagesModule, LandingPagesTemplateElementComponent, SELECTOR_LANDING_PAGES_TEMPLATE_ELEMENT } from '@lowcodeunit/landing-pages-common';
+import { createCustomElement } from '@angular/elements';
 
 @NgModule({
   declarations: [],
@@ -21,4 +22,12 @@ import { LandingPagesModule } from '@lowcodeunit/landing-pages-common';
   ],
   exports: [LandingPagesModule]
 })
-export class AppModule {}
+export class AppModule implements DoBootstrap {
+	constructor(protected injector: Injector) {}
+
+	public ngDoBootstrap() {
+		const template = createCustomElement(LandingPagesTemplateElementComponent, { injector: this.injector });
+
+		customElements.define(SELECTOR_LANDING_PAGES_TEMPLATE_ELEMENT, template);
+	}
+}

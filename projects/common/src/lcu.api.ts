@@ -7,3 +7,4 @@ export * from './lib/models/call-to-action.model';
 export * from './lib/models/landing-page-config.model';
 export * from './lib/models/hero-container.model';
 export * from './lib/models/call-to-action.model';
+export * from './lib/elements/template/template.component';

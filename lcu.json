@@ -8,7 +8,11 @@
 		"wc": [
 			"wc/landing-pages.lcu.js"
 		],
-		"solutions": {},
+		"solutions": {
+			"template": {
+				"element": "landing-pages-template-element"
+			}
+		},
 		"elements": {},
 		"data-flow": {},
 		"dependencies": {}
