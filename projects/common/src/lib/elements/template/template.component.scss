@@ -1,6 +1,5 @@
 $orange: #f12711;
 $hero-bg-color: rgb(26, 20, 32);
-$accent: #9CD8D7;
 
 p {
     font-size: 0.5em;
@@ -16,7 +15,7 @@ p {
         .hero-content {
             .title {
                 h1 {
-                    color: $accent;
+                    // color: mat-color($accent);
                 }
 
                 .subtitle {
