@@ -6,7 +6,7 @@ export class LandingPagesTemplateElementState {}
 
 export class LandingPagesTemplateContext extends LCUElementContext<LandingPagesTemplateElementState> {}
 
-export const SELECTOR_LANDING_PAGES_TEMPLATE_ELEMENT = 'landing-pages-template-element';
+export const SELECTOR_LANDING_PAGES_TEMPLATE_ELEMENT = 'lcu-landing-pages-template-element';
 
 @Component({
   selector: SELECTOR_LANDING_PAGES_TEMPLATE_ELEMENT,
