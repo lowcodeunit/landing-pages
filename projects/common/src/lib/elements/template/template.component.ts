@@ -39,7 +39,7 @@ export class LandingPagesTemplateElementComponent
   public ngOnInit() {
     super.ngOnInit();
 
-    if (this.Config === null) {
+    if (!this.Config) {
       this.setConfig();
     }
   }

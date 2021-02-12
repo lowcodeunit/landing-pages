@@ -1,15 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Demo</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <head>
+    <meta charset="utf-8" />
+    <title>Fathym | The Data Application Framework</title>
+    <base href="/" />
 
-</head>
-<body>
-  <lcu-root></lcu-root>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <script id="lcu-reg">
+      window.LCU = {
+        // APIRoot: "https://localhost:44387",
+        APIRoot: "https://www.fathym-int.com",
+        Application: {
+        },
+        State: {
+          ActionRoot: "/api/state",
+          Root: "/api/state",
+          // Environment: 'local',
+          UsernameMock: 'shannon.bruns@fathym.com',
+          Toolbar: {
+            Title: 'IoT Ensemble Beta',
+            Logo: './assets/logo.svg',
+            Actions: [
+              {
+                Text: 'Docs',
+                Path: '/docs',
+                Align: 'start',
+                Target: '_blank',
+              },
+              {
+                Text: 'Sign Out',
+                Path: '/.oauth/logout',
+                Align: 'end',
+              },
+            ],
+          },
+          LandingPage: {
+            Hero: {
+              BackgroundImage: 'assets/images/daniel-vogel-sVothhm7iRI-unsplash.jpg',
+              Message: 'Helps breweries develop solutions that can add a significant level of insight and reliability to brewing',
+              SubTitle: 'for Breweries',
+              Title: 'IoT Ensemble'
+            },
+            CallToAction: {
+              Label: 'Sign up today',
+              Message: 'To learn how fathym can save your brewery thousands of dollars in time and lost product.',
+              Target: '_blank',
+              URL: '#'
+            },
+            InfoCards: [
+              {
+                Icon: 'backup',
+                Info: 'Connect sensors to IoT Ensemble and collect real-time data in the cloud.',
+                Title: 'Connect Sensors'
+              },
+              {
+                Icon: 'insert_chart',
+                Info: 'Easily access data for use in 3rd party dashboards and reports.',
+                Title: 'Access Data'
+              }
+            ]
+          }
+        },
+        Settings: {
+        }
+      };
+    </script>
+  </head>
+  <body>
+    <lcu-root></lcu-root>
+  </body>
 </html>
