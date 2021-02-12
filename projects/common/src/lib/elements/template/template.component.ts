@@ -1,5 +1,9 @@
 import { Component, OnInit, Injector, Input } from '@angular/core';
-import { LCUElementContext, LcuElementComponent } from '@lcu/common';
+import {
+  LCUElementContext,
+  LcuElementComponent,
+  LCUServiceSettings,
+} from '@lcu/common';
 import { LandingPageConfig } from '../../models/landing-page-config.model';
 
 export class LandingPagesTemplateElementState {}
@@ -24,16 +28,26 @@ export class LandingPagesTemplateElementComponent
   public Config: LandingPageConfig;
 
   //  Constructors
-  constructor(protected injector: Injector) {
+  constructor(
+    protected injector: Injector,
+    protected settings: LCUServiceSettings
+  ) {
     super(injector);
   }
 
   //  Life Cycle
   public ngOnInit() {
     super.ngOnInit();
+
+    if (this.Config === null) {
+      this.setConfig();
+    }
   }
 
   //  API Methods
 
   //  Helpers
+  protected setConfig(): void {
+    this.Config = this.settings.State.LandingPage;
+  }
 }

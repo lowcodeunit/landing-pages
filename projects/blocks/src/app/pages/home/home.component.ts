@@ -13,20 +13,12 @@ export class HomeComponent implements OnInit {
   public Config: LandingPageConfig;
 
   //  Constructors
-  constructor(protected settings: LCUServiceSettings) {}
+  constructor() {}
 
   //  Life Cycle
-  public ngOnInit(): void {
-
-    this.setConfig();
-  }
+  public ngOnInit(): void {}
 
   //  API Methods
 
   //  Helpers
-
-  protected setConfig(): void {
-
-    this.Config = this.settings.State.LandingPage;
-  }
 }
