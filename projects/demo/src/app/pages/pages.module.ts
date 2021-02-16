@@ -6,11 +6,12 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { LandingPagesModule } from '@lowcodeunit/landing-pages-common';
 import { PagesRoutingModule } from './pages-routing.module';
 import { HomeComponent } from './home/home.component';
+import { BlocksComponent } from './blocks/blocks.component';
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, BlocksComponent],
   imports: [
-    CommonModule,
+  CommonModule,
     FormsModule,
     ReactiveFormsModule,
     PagesRoutingModule,

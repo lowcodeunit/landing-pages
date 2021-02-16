@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { LCUServiceSettings } from '@lcu/common';
-import { LandingPageConfig } from '@lowcodeunit/landing-pages-common';
 
 @Component({
   selector: 'lcu-home',

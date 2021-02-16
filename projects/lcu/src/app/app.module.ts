@@ -5,8 +5,10 @@ import { FathymSharedModule, LCUServiceSettings } from '@lcu/common';
 import { environment } from '../environments/environment';
 import {
   LandingPagesModule,
-  LandingPagesTemplateElementComponent,
-  SELECTOR_LANDING_PAGES_TEMPLATE_ELEMENT,
+  LandingPagesBlocksElementComponent,
+  SELECTOR_LANDING_PAGES_BLOCKS_ELEMENT,
+  LandingPagesHomePageElementComponent,
+  SELECTOR_LANDING_PAGES_HOME_PAGE_ELEMENT,
 } from '@lowcodeunit/landing-pages-common';
 import { createCustomElement } from '@angular/elements';
 
@@ -30,10 +32,16 @@ export class AppModule implements DoBootstrap {
   constructor(protected injector: Injector) {}
 
   public ngDoBootstrap() {
-    const template = createCustomElement(LandingPagesTemplateElementComponent, {
+    const blocks = createCustomElement(LandingPagesBlocksElementComponent, {
       injector: this.injector,
     });
 
-    customElements.define(SELECTOR_LANDING_PAGES_TEMPLATE_ELEMENT, template);
+    customElements.define(SELECTOR_LANDING_PAGES_BLOCKS_ELEMENT, blocks);
+
+    const homePage = createCustomElement(LandingPagesHomePageElementComponent, {
+      injector: this.injector,
+    });
+
+    customElements.define(SELECTOR_LANDING_PAGES_HOME_PAGE_ELEMENT, homePage);
   }
 }
