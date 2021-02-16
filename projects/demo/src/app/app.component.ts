@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { LCUServiceSettings } from '@lcu/common';
-// import { AppHostToolbarState } from '@lowcodeunit/app-host-common';
-
-// lowcodeunit/app-host
+import { AppHostToolbarState } from '@lowcodeunit/app-host-common';
 
 @Component({
   selector: 'lcu-root',
@@ -13,15 +11,30 @@ export class AppComponent {
   //  Fields
 
   //  Properties
-  public Toolbar: any;
+  public Toolbar: AppHostToolbarState;
 
   //  Constructors
-  constructor(protected settings: LCUServiceSettings) {
-    this.Toolbar = settings.State.Toolbar;
-  }
+  constructor() {}
 
   //  Life Cycle
-  public ngOnInit(): void {}
+  public ngOnInit(): void {
+    this.Toolbar = {
+      Title: 'IoT Ensemble Beta',
+      Logo: './assets/logo.svg',
+      Actions: [
+        {
+          Text: 'Home Page',
+          Path: '/',
+          Align: 'start',
+        },
+        {
+          Text: 'Blocks',
+          Path: '/blocks',
+          Align: 'start',
+        },
+      ],
+    };
+  }
 
   //  API Methods
 
