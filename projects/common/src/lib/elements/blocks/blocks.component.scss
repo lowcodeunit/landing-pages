@@ -1,8 +1,11 @@
 @import "../../../../assets/common";
 
-landing-pages-blocks-element ::ngdeep {
-  $orange: #f12711;
-  $hero-bg-color: rgb(26, 20, 32);
+$orange: #f12711;
+$hero-bg-color: rgb(26, 20, 32);
+
+:host ::ngdeep {
+  min-height: 100vh;
+  background: radial-gradient(#525252, #131313);
 
   p {
     font-size: 0.5em;

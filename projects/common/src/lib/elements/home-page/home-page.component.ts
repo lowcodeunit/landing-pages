@@ -1,4 +1,4 @@
-import { Component, OnInit, Injector } from '@angular/core';
+import { Component, OnInit, Injector, HostBinding } from '@angular/core';
 import { LCUElementContext, LcuElementComponent } from '@lcu/common';
 
 export class LandingPagesHomePageElementState {}
@@ -16,6 +16,10 @@ export class LandingPagesHomePageElementComponent extends LcuElementComponent<La
   //  Fields
 
   //  Properties
+  @HostBinding('class.landing-pages-home-page-element')
+  public get ClassHomePageElement(): boolean {
+    return true;
+  }
 
   //  Constructors
   constructor(protected injector: Injector) {
