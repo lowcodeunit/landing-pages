@@ -1,18 +1,12 @@
-import { LCUElementContext } from '@lcu/common';
-import { LCUActionState } from '@lowcodeunit/app-host-common';
+import { Component, OnInit, Injector, HostBinding } from '@angular/core';
+import { LCUElementContext, LcuElementComponent } from '@lcu/common';
 import { LandingPagesCallToActionContext } from '../../controls/call-to-action/call-to-action.models';
 import { LandingPagesHeroContext } from '../../controls/hero/hero.modela';
 import { LandingPagesInfoCardContext } from '../../controls/info-card/info-card.models';
 
-/**
- * Variable state properties used within the blocks landing page.
- */
-export class LandingPagesBlocksElementState {}
+export class LandingPagesHomePageElementState {}
 
-/**
- * Main context used for details of the blocks landing page.
- */
-export class LandingPagesBlocksContext extends LCUElementContext<LandingPagesBlocksElementState> {
+export class LandingPagesHomePageContext extends LCUElementContext<LandingPagesHomePageElementState> {
   /**
    * Call to Action
    */

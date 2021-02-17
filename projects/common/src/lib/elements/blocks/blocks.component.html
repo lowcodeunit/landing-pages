@@ -1,35 +1,5 @@
 <ng-container *ngIf="Context">
-  <div class="hero-container" *ngIf="Context.Hero">
-    <div fxLayoutAlign="center center" class="hero-header">
-      <div class="hero-content">
-        <div
-          fxLayout="row"
-          fxLayout.lt-sm="column"
-          fxLayoutGap="10px"
-          class="title"
-        >
-          <h1 class="accent-font-color">
-            {{ Context?.Hero.Title }}
-          </h1>
-
-          <span class="subtitle">
-            {{ Context?.Hero.SubTitle }}
-          </span>
-        </div>
-
-        <div class="divider-fill-hor margin-top-4 margin-bottom-4"></div>
-
-        <p class="tagline">
-          {{ Context?.Hero.Message }}
-        </p>
-      </div>
-    </div>
-
-    <div
-      class="hero-background"
-      [style.background-image]="'url(' + Context.Hero.BackgroundImage + ')'"
-    ></div>
-  </div>
+  <landing-page-hero-element [context]="Context.Hero"></landing-page-hero-element>
 
   <div fxLayoutAlign="center" class="main-container">
     <div fxFlex="40" class="inner-container">
@@ -39,8 +9,8 @@
           class="card-container"
           *ngFor="let card of Context?.InfoCards; let i = index"
         >
-          <div fxLayoutGap="10px" fxLayoutAlign="end center" class="card">
-            <div class="imgBx">
+          <div fxLayoutAlign="end center" class="card">
+            <div class="imgBx margin-bottom-2">
               <mat-icon>{{ card.Icon }}</mat-icon>
             </div>
 
@@ -61,10 +31,9 @@
         fxLayout="row"
         fxLayout.lt-md="column"
         fxLayoutAlign="center end"
-        fxLayoutGap="10px"
         *ngIf="Context.CallToAction"
       >
-        <p>{{ Context?.CallToAction.Message }}</p>
+        <p class="margin-bottom-2">{{ Context?.CallToAction.Message }}</p>
 
         <div>
           <lcu-action
