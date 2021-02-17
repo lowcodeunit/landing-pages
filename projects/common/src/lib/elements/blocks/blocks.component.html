@@ -1,8 +1,15 @@
-<ng-container *ngIf="Context">
-  <landing-pages-hero-element [context]="Context.Hero"></landing-pages-hero-element>
+<div ngClass.lt-md="lt-md" ngClass.lt-sm="lt-sm" *ngIf="Context">
+  <landing-pages-hero-element
+    [context]="Context.Hero"
+  ></landing-pages-hero-element>
 
   <div fxLayoutAlign="center" class="main-container">
-    <div fxFlex="40" class="inner-container">
+    <div
+      fxFlex="40%"
+      fxFlex.lt-md="70%"
+      fxFlex.lt-sm="90%"
+      class="inner-container"
+    >
       <ng-container *ngIf="Context.InfoCards">
         <div
           fxLayout="column"
@@ -12,14 +19,12 @@
           <mat-card fxLayout.lt-md="column" class="card">
             <div
               [ngClass.lt-md]="'imgBx imgBx-sm'"
-              [ngClass.gt-sm]="'imgBx imgBx-lg'">
+              [ngClass.gt-sm]="'imgBx imgBx-lg'"
+            >
               <mat-icon>{{ card.Icon }}</mat-icon>
             </div>
 
-            <div
-              fxLayout="column"
-              fxFlexOffset="10"
-              class="content">
+            <div fxLayout="column" fxFlexOffset="10" class="content">
               <div>
                 <h3>{{ card.Title }}</h3>
 
@@ -50,4 +55,4 @@
       </div>
     </div>
   </div>
-</ng-container>
+</div>
