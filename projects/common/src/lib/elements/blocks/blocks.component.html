@@ -5,10 +5,9 @@
         <div
           fxLayout="row"
           fxLayout.lt-sm="column"
-          fxLayoutGap="10px"
           class="title"
         >
-          <h1 class="accent-font-color">
+          <h1 class="accent-font-color margin-right-2">
             {{ Context?.Hero.Title }}
           </h1>
 
@@ -39,12 +38,17 @@
           class="card-container"
           *ngFor="let card of Context?.InfoCards; let i = index"
         >
-          <div fxLayoutGap="10px" fxLayoutAlign="end center" class="card">
-            <div class="imgBx">
+          <div fxLayout.lt-md="column" class="card">
+            <div 
+              [ngClass.lt-md]="'imgBx imgBx-sm'" 
+              [ngClass.gt-sm]="'imgBx imgBx-lg'">
               <mat-icon>{{ card.Icon }}</mat-icon>
             </div>
 
-            <div fxLayout="column" fxFlex="80" class="content">
+            <div 
+              fxLayout="column" 
+              fxFlexOffset="10"
+              class="content">
               <div>
                 <h3>{{ card.Title }}</h3>
 
@@ -61,10 +65,9 @@
         fxLayout="row"
         fxLayout.lt-md="column"
         fxLayoutAlign="center end"
-        fxLayoutGap="10px"
         *ngIf="Context.CallToAction"
       >
-        <p>{{ Context?.CallToAction.Message }}</p>
+        <p [ngClass.gt-xs]="{'margin-top-4': true}">{{ Context?.CallToAction.Message }}</p>
 
         <div>
           <lcu-action
