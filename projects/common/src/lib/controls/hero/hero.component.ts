@@ -1,6 +1,6 @@
 import { Component, OnInit, Injector } from '@angular/core';
 import { LCUElementContext, LcuElementComponent } from '@lcu/common';
-import { LandingPagesHeroContext } from './hero.modela';
+import { LandingPagesHeroContext } from './hero.models';
 
 export const SELECTOR_LANDING_PAGES_HERO_ELEMENT = 'landing-pages-hero-element';
 

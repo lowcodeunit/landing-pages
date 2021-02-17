@@ -1,7 +1,7 @@
 import { LCUElementContext } from '@lcu/common';
 import { LCUActionState } from '@lowcodeunit/app-host-common';
 import { LandingPagesCallToActionContext } from '../../controls/call-to-action/call-to-action.models';
-import { LandingPagesHeroContext } from '../../controls/hero/hero.modela';
+import { LandingPagesHeroContext } from '../../controls/hero/hero.models';
 import { LandingPagesInfoCardContext } from '../../controls/info-card/info-card.models';
 
 /**

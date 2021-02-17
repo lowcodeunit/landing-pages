@@ -1,9 +1,6 @@
 import { Component, OnInit, Injector, HostBinding } from '@angular/core';
 import { LCUElementContext, LcuElementComponent } from '@lcu/common';
-
-export class LandingPagesHomePageElementState {}
-
-export class LandingPagesHomePageContext extends LCUElementContext<LandingPagesHomePageElementState> {}
+import { LandingPagesHomePageContext } from './home-page.models';
 
 export const SELECTOR_LANDING_PAGES_HOME_PAGE_ELEMENT = 'landing-pages-home-page-element';
 
