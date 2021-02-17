@@ -9,7 +9,7 @@
           class="card-container"
           *ngFor="let card of Context?.InfoCards; let i = index"
         >
-          <div fxLayout.lt-md="column" class="card">
+          <mat-card fxLayout.lt-md="column" class="card">
             <div
               [ngClass.lt-md]="'imgBx imgBx-sm'"
               [ngClass.gt-sm]="'imgBx imgBx-lg'">
@@ -26,7 +26,7 @@
                 <p>{{ card.Info }}</p>
               </div>
             </div>
-          </div>
+          </mat-card>
         </div>
       </ng-container>
 

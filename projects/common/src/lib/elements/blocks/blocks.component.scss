@@ -1,4 +1,4 @@
-// @import "../../../../assets/common";
+@import "../../../../assets/common";
 
 $orange: #f12711;
 $hero-bg-color: rgb(26, 20, 32);
@@ -15,7 +15,7 @@ $hero-bg-color: rgb(26, 20, 32);
 
   .hero-container {
     .hero-header {
-      padding: 30px;
+      @extend .padding-5;
       background-color: $hero-bg-color;
 
       .hero-content {
@@ -51,61 +51,64 @@ $hero-bg-color: rgb(26, 20, 32);
   }
 
   .main-container {
-    margin-top: 20px;
     font-size: 1.75em;
-  }
+    @extend .margin-top-3;
 
-  .card-container {
-    .card {
-      position: relative;
-      min-height: 100px;
-      background: white;
-      border-radius: 5px;
-      margin: 10px 0;
+    .card-container {
+      .card {
+        position: relative;
+        min-height: 100px;
+        background: white;
+        @extend .margin-2;
+        @extend .padding-left-5;
+        @extend .padding-right-5;
 
-      .content {
-        margin: 25px;
-        h3 {
-          margin-bottom: 5px;
-          font-size: 0.85em;
-          color: $orange;
+        .content {
+          @extend .margin-3;
+
+          h3 {
+            font-size: 0.85em;
+            color: $orange;
+            @extend .margin-bottom-1;
+          }
+
+          p {
+            color: black;
+          }
         }
 
-        p {
-          color: black;
+        .imgBx {
+          background: $orange;
+          width: 70px;
+          height: 70px;
+
+          .mat-icon {
+            color: white;
+            font-size: 1.5em;
+          }
         }
-      }
 
-      .imgBx {
-        background: $orange;
-        width: 70px;
-        height: 70px;
-        .mat-icon {
-          color: white;
-          font-size: 1.5em;
+        .imgBx-sm .mat-icon {
+          @extend .padding-2;
         }
-      }
 
-      .imgBx-sm .mat-icon {
-        padding: 10px;
-      }
+        .imgBx-sm {
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px;
+          width: 100%;
+          height: 70px;
+        }
 
-      .imgBx-sm {
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-        width: 100%;
-        height: 70px;
-      }
-
-      .imgBx-lg {
-        left: -30px;
-        padding: 10px;
-        top: calc(50% - 70px);
-        position: absolute;
-        z-index: 1;
-        border-radius: 5px;
-        overflow: hidden;
-        filter: drop-shadow(0 0 15px #333);
+        .imgBx-lg {
+          left: -30px;
+          padding: 10px;
+          top: calc(50% - 70px);
+          position: absolute;
+          z-index: 1;
+          border-radius: 5px;
+          overflow: hidden;
+          filter: drop-shadow(0 0 15px #333);
+        }
       }
     }
   }
