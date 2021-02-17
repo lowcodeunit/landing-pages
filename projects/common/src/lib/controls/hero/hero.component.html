@@ -1,17 +1,17 @@
 <div class="hero-container" *ngIf="Context">
-  <div fxLayoutAlign="center center" class="hero-header">
+  <div class="hero-header">
     <div class="hero-content">
-      <div fxLayout="row" fxLayout.lt-sm="column" class="title">
-        <h1 class="accent-font-color margin-right-2">
+      <div class="title">
+        <h1 class="main">
           {{ Context.Title }}
         </h1>
 
-        <span class="subtitle">
+        <span class="sub">
           {{ Context.SubTitle }}
         </span>
       </div>
 
-      <div class="divider-fill-hor margin-top-4 margin-bottom-4"></div>
+      <div class="divider-fill-hor"></div>
 
       <p class="tagline">
         {{ Context.Message }}

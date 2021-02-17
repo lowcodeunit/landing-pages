@@ -20,16 +20,26 @@ $hero-bg-color: rgb(26, 20, 32);
       background-color: $hero-bg-color;
 
       .hero-content {
+        max-width: 50%;
+        margin: auto;
+
         .title {
-          h1 {
-            // color: mat-color($accent);
+          .main {
+            display: inline-block;
+            @extend .accent-font-color;
+            @extend .margin-right-2;
           }
 
-          .subtitle {
+          .sub {
             color: white;
             font-size: 2em;
             font-weight: 200;
           }
+        }
+
+        .divider-fill-hor {
+          @extend .margin-top-4;
+          @extend .margin-bottom-4;
         }
 
         .tagline {
@@ -119,13 +129,51 @@ $hero-bg-color: rgb(26, 20, 32);
   }
 }
 
+.blocks.lt-md ::ng-deep,
 .blocks.lt-sm ::ng-deep {
+  .hero-container {
+    .hero-header {
+      .hero-content {
+        .title {
+          .main {
+            display: block;
+            @extend .margin-right-0;
+          }
+
+          .sub {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
   .call-to-action {
     .cta-action {
       width: 100%;
 
       .mat-button {
         text-align: center;
+      }
+    }
+  }
+}
+
+.blocks.lt-md ::ng-deep {
+  .hero-container {
+    .hero-header {
+      .hero-content {
+        max-width: 80%;
+      }
+    }
+  }
+}
+
+.blocks.lt-sm ::ng-deep {
+  .hero-container {
+    .hero-header {
+      .hero-content {
+        max-width: 95%;
       }
     }
   }
