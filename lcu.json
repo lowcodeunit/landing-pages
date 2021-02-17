@@ -26,6 +26,9 @@
 			},
 			"call-to-action": {
 				"element": "landing-pages-call-to-action-element"
+			},
+			"info-cards": {
+				"element": "landing-pages-info-cards-element"
 			}
 		},
 		"elements": {},

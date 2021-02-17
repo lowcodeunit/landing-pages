@@ -1,3 +1,5 @@
+import { LandingPagesInfoCardsElementComponent } from '@lowcodeunit/landing-pages-common';
+import { SELECTOR_LANDING_PAGES_INFO_CARDS_ELEMENT } from '@lowcodeunit/landing-pages-common';
 import { NgModule, DoBootstrap, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -55,5 +57,9 @@ export class AppModule implements DoBootstrap {
 		const callToAction = createCustomElement(LandingPagesCallToActionElementComponent, { injector: this.injector });
 
 		customElements.define(SELECTOR_LANDING_PAGES_CALL_TO_ACTION_ELEMENT, callToAction);
+	
+		const infoCards = createCustomElement(LandingPagesInfoCardsElementComponent, { injector: this.injector });
+
+		customElements.define(SELECTOR_LANDING_PAGES_INFO_CARDS_ELEMENT, infoCards);
 	}
 }

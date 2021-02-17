@@ -10,36 +10,15 @@
       fxFlex.lt-sm="90%"
       class="inner-container"
     >
-      <ng-container *ngIf="Context.InfoCards">
-        <div
-          fxLayout="column"
-          class="card-container"
-          *ngFor="let card of Context?.InfoCards; let i = index"
-        >
-          <landing-pages-info-card-element
-            [context]="card"
-          ></landing-pages-info-card-element>
-        </div>
-      </ng-container>
+      <landing-pages-info-cards-element
+        [context]="Context.InfoCards"
+      ></landing-pages-info-cards-element>
 
       <div class="divider-fill-hor margin-top-4 margin-bottom-4"></div>
 
-      <div
-        fxLayout="row"
-        fxLayout.lt-md="column"
-        fxLayoutAlign="center end"
-        *ngIf="Context.CallToAction"
-      >
-        <p>{{ Context?.CallToAction.Message }}</p>
-
-        <div>
-          <lcu-action
-            class="nav-action"
-            [action]="Context?.CallToAction?.Action"
-            (action-click)="ActionClicked($event)"
-          ></lcu-action>
-        </div>
-      </div>
+      <landing-pages-call-to-action-element
+        [context]="Context.CallToAction"
+      ></landing-pages-call-to-action-element>
     </div>
   </div>
 </div>

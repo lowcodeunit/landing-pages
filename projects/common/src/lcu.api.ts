@@ -11,3 +11,5 @@ export * from './lib/controls/info-card/info-card.component';
 export * from './lib/controls/info-card/info-card.models';
 export * from './lib/controls/hero/hero.component';
 export * from './lib/controls/hero/hero.models';
+export * from './lib/controls/info-cards/info-cards.component';
+// export * from './lib/controls/info-cards/info-cards.models';

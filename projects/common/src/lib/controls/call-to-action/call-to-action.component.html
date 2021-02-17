@@ -1,3 +1,15 @@
-<h2>LandingPages CallToAction Next Steps</h2>
+<div
+  fxLayout="row"
+  fxLayout.lt-md="column"
+  fxLayoutAlign="center end"
+  *ngIf="Context"
+>
+  <p>{{ Context.Message }}</p>
 
-<p>Do stuff and things!</p>
+  <div class="cta-action">
+    <lcu-action
+      [action]="Context.Action"
+      (action-click)="ActionClicked($event)"
+    ></lcu-action>
+  </div>
+</div>

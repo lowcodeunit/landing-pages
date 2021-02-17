@@ -7,6 +7,7 @@ import { LandingPagesBlocksElementComponent } from './elements/blocks/blocks.com
 import { LandingPagesHomePageElementComponent } from './elements/home-page/home-page.component';
 import { LandingPagesHeroElementComponent } from './controls/hero/hero.component';
 import { LandingPagesInfoCardElementComponent } from './controls/info-card/info-card.component';
+import { LandingPagesInfoCardsElementComponent } from './controls/info-cards/info-cards.component';
 import { LandingPagesCallToActionElementComponent } from './controls/call-to-action/call-to-action.component';
 
 @NgModule({
@@ -15,6 +16,7 @@ import { LandingPagesCallToActionElementComponent } from './controls/call-to-act
     LandingPagesHomePageElementComponent,
     LandingPagesHeroElementComponent,
     LandingPagesInfoCardElementComponent,
+    LandingPagesInfoCardsElementComponent,
     LandingPagesCallToActionElementComponent,
   ],
   imports: [
@@ -30,6 +32,7 @@ import { LandingPagesCallToActionElementComponent } from './controls/call-to-act
     LandingPagesHomePageElementComponent,
     LandingPagesHeroElementComponent,
     LandingPagesInfoCardElementComponent,
+    LandingPagesInfoCardsElementComponent,
     LandingPagesCallToActionElementComponent,
   ],
   entryComponents: [
@@ -37,6 +40,7 @@ import { LandingPagesCallToActionElementComponent } from './controls/call-to-act
     LandingPagesHomePageElementComponent,
     LandingPagesHeroElementComponent,
     LandingPagesInfoCardElementComponent,
+    LandingPagesInfoCardsElementComponent,
     LandingPagesCallToActionElementComponent,
   ],
 })
