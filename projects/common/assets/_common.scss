@@ -2,6 +2,7 @@
 @import '../../../node_modules/@lcu/common/assets/styles/utils/margins-padding';
 @import '../../../node_modules/@lcu/common/assets/styles/utils/fathym-cursors';
 
+
 $global-theme: fathym-ivy-theme(true);
 
 $primary: map-get($global-theme, primary);
