@@ -16,10 +16,6 @@ export class LandingPagesHomePageElementComponent extends LcuElementComponent<La
   //  Fields
 
   //  Properties
-  @HostBinding('class.landing-pages-home-page-element')
-  public get ClassHomePageElement(): boolean {
-    return true;
-  }
 
   //  Constructors
   constructor(protected injector: Injector) {

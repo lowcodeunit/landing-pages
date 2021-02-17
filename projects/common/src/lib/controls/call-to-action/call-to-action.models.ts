@@ -1,7 +1,9 @@
-import { InfoCardModel } from './info-card.model';
 import { LCUActionState } from '@lowcodeunit/app-host-common';
+import { LCUElementContext } from '@lcu/common';
 
-export class CallToActionModel {
+export class LandingPagesCallToActionElementState {}
+
+export class LandingPagesCallToActionContext extends LCUElementContext<LandingPagesCallToActionElementState> {
   /**
    * Where to open linked document
    */

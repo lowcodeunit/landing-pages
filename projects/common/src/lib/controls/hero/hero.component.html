@@ -1,0 +1,30 @@
+<div class="hero-container" *ngIf="Context">
+  <div fxLayoutAlign="center center" class="hero-header">
+    <div class="hero-content">
+      <div
+        fxLayout="row"
+        fxLayout.lt-sm="column"
+        class="title"
+      >
+        <h1 class="accent-font-color margin-bottom-2">
+          {{ Context.Title }}
+        </h1>
+
+        <span class="subtitle">
+          {{ Context.SubTitle }}
+        </span>
+      </div>
+
+      <div class="divider-fill-hor margin-top-4 margin-bottom-4"></div>
+
+      <p class="tagline">
+        {{ Context.Message }}
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="hero-background"
+    [style.background-image]="'url(' + Context.BackgroundImage + ')'"
+  ></div>
+</div>

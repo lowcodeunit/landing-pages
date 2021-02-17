@@ -1,7 +1,14 @@
-/**
- * Model used for hero's inside of landing pages
- */
-export class HeroModel {
+import { LCUElementContext } from '@lcu/common';
+import { LCUActionState } from '@lowcodeunit/app-host-common';
+
+export class LandingPagesHeroElementState {}
+
+export class LandingPagesHeroContext extends LCUElementContext<LandingPagesHeroElementState> {
+  /**
+   * Where to open linked document
+   */
+  public Action?: LCUActionState;
+
   /**
    * Background image that sits below hero container content
    */

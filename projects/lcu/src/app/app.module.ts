@@ -8,7 +8,7 @@ import {
   LandingPagesBlocksElementComponent,
   SELECTOR_LANDING_PAGES_BLOCKS_ELEMENT,
   LandingPagesHomePageElementComponent,
-  SELECTOR_LANDING_PAGES_HOME_PAGE_ELEMENT,
+  SELECTOR_LANDING_PAGES_HOME_PAGE_ELEMENT, LandingPagesHeroElementComponent, SELECTOR_LANDING_PAGES_HERO_ELEMENT, LandingPagesInfoCardElementComponent, SELECTOR_LANDING_PAGES_INFO_CARD_ELEMENT, LandingPagesCallToActionElementComponent, SELECTOR_LANDING_PAGES_CALL_TO_ACTION_ELEMENT,
 } from '@lowcodeunit/landing-pages-common';
 import { createCustomElement } from '@angular/elements';
 
@@ -43,5 +43,17 @@ export class AppModule implements DoBootstrap {
     });
 
     customElements.define(SELECTOR_LANDING_PAGES_HOME_PAGE_ELEMENT, homePage);
-  }
+  
+		const hero = createCustomElement(LandingPagesHeroElementComponent, { injector: this.injector });
+
+		customElements.define(SELECTOR_LANDING_PAGES_HERO_ELEMENT, hero);
+	
+		const infoCard = createCustomElement(LandingPagesInfoCardElementComponent, { injector: this.injector });
+
+		customElements.define(SELECTOR_LANDING_PAGES_INFO_CARD_ELEMENT, infoCard);
+	
+		const callToAction = createCustomElement(LandingPagesCallToActionElementComponent, { injector: this.injector });
+
+		customElements.define(SELECTOR_LANDING_PAGES_CALL_TO_ACTION_ELEMENT, callToAction);
+	}
 }
