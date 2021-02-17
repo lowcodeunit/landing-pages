@@ -2,25 +2,37 @@ import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FathymSharedModule, MaterialModule } from '@lcu/common';
-import { LandingPageTemplateComponent } from './elements/template/template.component';
+import { AppHostModule } from '@lowcodeunit/app-host-common';
+import { LandingPagesBlocksElementComponent } from './elements/blocks/blocks.component';
+import { LandingPagesHomePageElementComponent } from './elements/home-page/home-page.component';
 
 @NgModule({
-  declarations: [LandingPageTemplateComponent],
+  declarations: [
+    LandingPagesBlocksElementComponent,
+    LandingPagesHomePageElementComponent,
+  ],
   imports: [
     FathymSharedModule,
     FormsModule,
     ReactiveFormsModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    AppHostModule,
   ],
-  exports: [LandingPageTemplateComponent],
-  entryComponents: [LandingPageTemplateComponent]
+  exports: [
+    LandingPagesBlocksElementComponent,
+    LandingPagesHomePageElementComponent,
+  ],
+  entryComponents: [
+    LandingPagesBlocksElementComponent,
+    LandingPagesHomePageElementComponent,
+  ],
 })
 export class LandingPagesModule {
   static forRoot(): ModuleWithProviders<LandingPagesModule> {
     return {
       ngModule: LandingPagesModule,
-      providers: []
+      providers: [],
     };
   }
 }

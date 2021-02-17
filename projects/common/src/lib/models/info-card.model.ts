@@ -1,19 +1,19 @@
 /**
- * Card within the main content area
+ * Card model details
  */
 export class InfoCardModel {
-    /**
-     * Card icon
-     */
-    public Icon: string;
+  /**
+   * Card icon
+   */
+  public Icon: string;
 
-    /**
-     * Message / string of content
-     */
-    public Info: string;
+  /**
+   * Message / string of content
+   */
+  public Info: string;
 
-    /**
-     * Card title
-     */
-    public Title: string;
+  /**
+   * Card title
+   */
+  public Title: string;
 }

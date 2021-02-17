@@ -26,13 +26,6 @@ $hero-bg-color: rgb(26, 20, 32);
     font-family: "Poppins", sans-serif;
 }
 
-body {
-    min-height: 100vh;
-    overflow: hidden;
-    overflow-y: scroll;
-    background: radial-gradient(#525252, #131313);
-}
-
 .accent-font-color {
     color: mat-color($accent);
 }

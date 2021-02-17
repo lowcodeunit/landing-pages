@@ -1,31 +1,34 @@
-import { LandingPagesModule } from '@lowcodeunit/landing-pages-common';
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { FathymSharedModule, MaterialModule } from '@lcu/common';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+import { FathymSharedModule, LCUServiceSettings, MaterialModule } from '@lcu/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LandingPagesModule } from '@lowcodeunit/landing-pages-common';
+import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
-// import { HomeComponent } from './controls/home/home.component';
-import { LcuDocumentationModule } from '@lowcodeunit/lcu-documentation-common';
-
+import { AppHostModule } from '@lowcodeunit/app-host-common';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    AppRoutingModule,
-    BrowserModule,
+    FathymSharedModule.forRoot(),
     BrowserAnimationsModule,
-    FathymSharedModule,
+    HttpClientModule,
     MaterialModule,
-    FlexLayoutModule,
-    LcuDocumentationModule.forRoot(),
-    LandingPagesModule.forRoot()
+    ReactiveFormsModule,
+    FormsModule,
+    AppRoutingModule,
+    LandingPagesModule,
+    AppHostModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LCUServiceSettings,
+      useValue: FathymSharedModule.DefaultServiceSettings(environment),
+    },
+  ],
   bootstrap: [AppComponent],
-  exports: [LandingPagesModule]
 })
-export class AppModule { }
+export class AppModule {}
