@@ -1,3 +1,15 @@
-<h2>LandingPages InfoCard Next Steps</h2>
+<mat-card fxLayout.lt-md="column" class="card" *ngIf="Context">
+  <div class="imgBx imgBx-lg">
+    <!-- [ngClass.lt-md]="'imgBx imgBx-sm'"
+            [ngClass.gt-sm]="'imgBx imgBx-lg'" -->
+    <mat-icon>{{ Context.Icon }}</mat-icon>
+  </div>
 
-<p>Do stuff and things!</p>
+  <div fxLayout="column" fxFlexOffset="10" class="content">
+    <div>
+      <h3>{{ Context.Title }}</h3>
+
+      <p>{{ Context.Info }}</p>
+    </div>
+  </div>
+</mat-card>
