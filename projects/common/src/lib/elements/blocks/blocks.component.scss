@@ -3,7 +3,7 @@
 $orange: #f12711;
 $hero-bg-color: rgb(26, 20, 32);
 
-:host {
+:host ::ng-deep {
   display: block;
   min-height: 100vh;
   background: radial-gradient(#525252, #131313);
@@ -36,6 +36,7 @@ $hero-bg-color: rgb(26, 20, 32);
         }
       }
     }
+
     .hero-background {
       position: absolute;
       z-index: -1;

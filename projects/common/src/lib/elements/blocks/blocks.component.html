@@ -1,34 +1,5 @@
 <ng-container *ngIf="Context">
-  <div class="hero-container" *ngIf="Context.Hero">
-    <div fxLayoutAlign="center center" class="hero-header">
-      <div class="hero-content">
-        <div
-          fxLayout="row"
-          fxLayout.lt-sm="column"
-          class="title"
-        >
-          <h1 class="accent-font-color margin-right-2">
-            {{ Context?.Hero.Title }}
-          </h1>
-
-          <span class="subtitle">
-            {{ Context?.Hero.SubTitle }}
-          </span>
-        </div>
-
-        <div class="divider-fill-hor margin-top-4 margin-bottom-4"></div>
-
-        <p class="tagline">
-          {{ Context?.Hero.Message }}
-        </p>
-      </div>
-    </div>
-
-    <div
-      class="hero-background"
-      [style.background-image]="'url(' + Context.Hero.BackgroundImage + ')'"
-    ></div>
-  </div>
+  <landing-pages-hero-element [context]="Context.Hero"></landing-pages-hero-element>
 
   <div fxLayoutAlign="center" class="main-container">
     <div fxFlex="40" class="inner-container">
@@ -39,14 +10,14 @@
           *ngFor="let card of Context?.InfoCards; let i = index"
         >
           <div fxLayout.lt-md="column" class="card">
-            <div 
-              [ngClass.lt-md]="'imgBx imgBx-sm'" 
+            <div
+              [ngClass.lt-md]="'imgBx imgBx-sm'"
               [ngClass.gt-sm]="'imgBx imgBx-lg'">
               <mat-icon>{{ card.Icon }}</mat-icon>
             </div>
 
-            <div 
-              fxLayout="column" 
+            <div
+              fxLayout="column"
               fxFlexOffset="10"
               class="content">
               <div>
