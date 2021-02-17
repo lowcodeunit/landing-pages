@@ -1,11 +1,11 @@
-<mat-card fxLayout.lt-md="column" class="card" *ngIf="Context">
+<mat-card class="card" *ngIf="Context">
   <div class="lcu-icon lcu-icon-lg">
     <!-- [ngClass.lt-md]="'lcu-icon lcu-icon-sm'"
             [ngClass.gt-sm]="'lcu-icon lcu-icon-lg'" -->
     <mat-icon>{{ Context.Icon }}</mat-icon>
   </div>
 
-  <div fxLayout="column" fxFlexOffset="10" class="content">
+  <div class="content">
     <div>
       <h3>{{ Context.Title }}</h3>
 

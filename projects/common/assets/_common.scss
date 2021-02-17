@@ -1,7 +1,6 @@
-@import '../../../node_modules/@lcu/common/assets/theming/common-theme';
-@import '../../../node_modules/@lcu/common/assets/styles/utils/margins-padding';
-@import '../../../node_modules/@lcu/common/assets/styles/utils/fathym-cursors';
-
+@import "../../../node_modules/@lcu/common/assets/theming/common-theme";
+@import "../../../node_modules/@lcu/common/assets/styles/utils/margins-padding";
+@import "../../../node_modules/@lcu/common/assets/styles/utils/fathym-cursors";
 
 $global-theme: fathym-ivy-theme(true);
 
@@ -20,26 +19,43 @@ $orange: #f12711;
 $hero-bg-color: rgb(26, 20, 32);
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  // margin: 0;
+  // padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
 }
 
 .accent-font-color {
-    color: mat-color($accent);
+  color: mat-color($accent);
 }
 
 .divider-fill-vert {
-    background-color: $divider;
-    min-height: 100%;
-    top:10%;
-    bottom:10%;
-    min-width: $divider-size;
+  background-color: $divider;
+  min-height: 100%;
+  top: 10%;
+  bottom: 10%;
+  min-width: $divider-size;
 }
 
 .divider-fill-hor {
-    background-color: $divider;
-    height: $divider-size;
-    width: 100%;
+  background-color: $divider;
+  height: $divider-size;
+  width: 100%;
+}
+
+.flex-column {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
 }

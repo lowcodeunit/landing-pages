@@ -6,6 +6,7 @@ $hero-bg-color: rgb(26, 20, 32);
 :host ::ng-deep {
   overflow: auto;
   display: block;
+  min-height: calc(100vh - 64px);
 
   p {
     font-size: 0.5em;

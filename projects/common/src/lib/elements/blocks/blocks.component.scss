@@ -6,7 +6,7 @@ $hero-bg-color: rgb(26, 20, 32);
 :host ::ng-deep {
   overflow: auto;
   display: block;
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   background: radial-gradient(#525252, #131313);
 
   p {
@@ -20,7 +20,7 @@ $hero-bg-color: rgb(26, 20, 32);
       background-color: $hero-bg-color;
 
       .hero-content {
-        max-width: 50%;
+        width: 60%;
         margin: auto;
 
         .title {
@@ -67,6 +67,8 @@ $hero-bg-color: rgb(26, 20, 32);
     @extend .margin-bottom-3;
 
     .card-container {
+      @extend .flex-column;
+
       .card {
         position: relative;
         min-height: 100px;
@@ -77,6 +79,7 @@ $hero-bg-color: rgb(26, 20, 32);
 
         .content {
           @extend .margin-3;
+          @extend .flex-column;
 
           h3 {
             font-size: 0.85em;
@@ -125,6 +128,9 @@ $hero-bg-color: rgb(26, 20, 32);
     }
 
     .call-to-action {
+      align-items: flex-end;
+      place-content: flex-end center;
+      @extend .flex-row;
     }
   }
 }
@@ -148,7 +154,17 @@ $hero-bg-color: rgb(26, 20, 32);
     }
   }
 
+  .main-container {
+    .card-container {
+      .card {
+        @extend .flex-column;
+      }
+    }
+  }
+
   .call-to-action {
+    @extend .flex-column;
+
     .cta-action {
       width: 100%;
 
@@ -163,7 +179,7 @@ $hero-bg-color: rgb(26, 20, 32);
   .hero-container {
     .hero-header {
       .hero-content {
-        max-width: 80%;
+        width: 85%;
       }
     }
   }
@@ -173,7 +189,7 @@ $hero-bg-color: rgb(26, 20, 32);
   .hero-container {
     .hero-header {
       .hero-content {
-        max-width: 95%;
+        width: 100%;
       }
     }
   }
