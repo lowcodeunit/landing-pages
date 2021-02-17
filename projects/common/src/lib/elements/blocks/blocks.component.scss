@@ -3,7 +3,8 @@
 $orange: #f12711;
 $hero-bg-color: rgb(26, 20, 32);
 
-:host ::ng-deep {
+.blocks ::ng-deep {
+  overflow: auto;
   display: block;
   min-height: 100vh;
   background: radial-gradient(#525252, #131313);
@@ -53,6 +54,7 @@ $hero-bg-color: rgb(26, 20, 32);
   .main-container {
     font-size: 1.75em;
     @extend .margin-top-3;
+    @extend .margin-bottom-3;
 
     .card-container {
       .card {
@@ -109,6 +111,21 @@ $hero-bg-color: rgb(26, 20, 32);
           overflow: hidden;
           filter: drop-shadow(0 0 15px #333);
         }
+      }
+    }
+
+    .call-to-action {
+    }
+  }
+}
+
+.blocks.lt-sm ::ng-deep {
+  .call-to-action {
+    .cta-action {
+      width: 100%;
+
+      .mat-button {
+        text-align: center;
       }
     }
   }
