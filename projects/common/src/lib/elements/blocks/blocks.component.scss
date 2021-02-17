@@ -3,7 +3,7 @@
 $orange: #f12711;
 $hero-bg-color: rgb(26, 20, 32);
 
-.blocks ::ng-deep {
+:host ::ng-deep {
   overflow: auto;
   display: block;
   min-height: 100vh;
