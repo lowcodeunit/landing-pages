@@ -42,6 +42,6 @@ export class LandingPagesHomePageElementComponent
 
   //  Helpers
   protected setContext(): void {
-    this.Context = this.settings.State.LandingPage;
+    this.SetContext(this.settings.State.LandingPage);
   }
 }
