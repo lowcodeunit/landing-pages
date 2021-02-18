@@ -38,7 +38,7 @@ export class LandingPagesHeroElementComponent
 
   //  Helpers
   protected setBackgroundColorStyle() {
-    if (this.Context.BackgroundColor) {
+    if (this.Context?.BackgroundColor) {
       this.BackgroundColorStyle = this.sanitizer.bypassSecurityTrustHtml(`
       <style>
         .hero-background:before {
