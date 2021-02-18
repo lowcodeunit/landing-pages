@@ -29,9 +29,6 @@ export class LandingPagesBlocksElementComponent
   public ngOnInit() {
     super.ngOnInit();
 
-    console.log(`Loading blocks...`);
-    console.log(this.Context);
-
     if (!this.Context) {
       this.setContext();
     }
@@ -41,9 +38,6 @@ export class LandingPagesBlocksElementComponent
 
   //  Helpers
   protected setContext(): void {
-    console.log(`Setting initial from state...`);
-    console.log(this.settings.State);
-
     this.SetContext(this.settings.State.LandingPage);
   }
 }
