@@ -40,7 +40,7 @@ export class LandingPagesBlocksElementComponent
 
   //  Helpers
   protected setContext(): void {
-    console.log(this.settings.State);
+    console.log(`Setting initial from state...` + this.settings.State);
 
     this.SetContext(this.settings.State.LandingPage);
   }
