@@ -29,6 +29,8 @@ export class LandingPagesBlocksElementComponent
   public ngOnInit() {
     super.ngOnInit();
 
+    console.log(`Loading blocks...` + this.Context);
+
     if (!this.Context) {
       this.setContext();
     }
