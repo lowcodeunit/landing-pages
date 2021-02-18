@@ -1,15 +1,11 @@
 <mat-card class="card" *ngIf="Context">
-  <div class="lcu-icon lcu-icon-lg">
-    <!-- [ngClass.lt-md]="'lcu-icon lcu-icon-sm'"
-            [ngClass.gt-sm]="'lcu-icon lcu-icon-lg'" -->
+  <div class="icon">
     <mat-icon>{{ Context.Icon }}</mat-icon>
   </div>
 
   <div class="content">
-    <div>
-      <h3>{{ Context.Title }}</h3>
+    <h3>{{ Context.Title }}</h3>
 
-      <p>{{ Context.Info }}</p>
-    </div>
+    <p>{{ Context.Info }}</p>
   </div>
 </mat-card>

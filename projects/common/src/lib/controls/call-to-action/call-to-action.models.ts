@@ -13,4 +13,9 @@ export class LandingPagesCallToActionContext extends LCUElementContext<LandingPa
    * Message to entice a call to action
    */
   public Message?: string;
+
+  /**
+   * Message to entice a call to action
+   */
+  public Title?: string;
 }

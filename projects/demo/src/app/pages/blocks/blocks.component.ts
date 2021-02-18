@@ -23,6 +23,8 @@ export class BlocksComponent implements OnInit {
           Text: 'Sign up today',
           Target: '_blank',
           Path: '#',
+          Raised: true,
+          ButtonColor: 'primary'
         },
         Message:
           'To learn how fathym can save your brewery thousands of dollars in time and lost product.',
@@ -48,7 +50,6 @@ export class BlocksComponent implements OnInit {
           Title: 'Access Data',
         },
       ],
-      State: {},
     };
   }
 

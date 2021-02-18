@@ -25,12 +25,12 @@ export class AppComponent {
         {
           Text: 'Home Page',
           Path: '/',
-          Align: 'start',
+          Align: 'end',
         },
         {
           Text: 'Blocks',
           Path: '/blocks',
-          Align: 'start',
+          Align: 'end',
         },
       ],
     };

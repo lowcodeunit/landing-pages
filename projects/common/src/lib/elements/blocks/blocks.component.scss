@@ -11,7 +11,7 @@ $hero-bg-color: rgb(26, 20, 32);
 
   p {
     font-size: 0.5em;
-    color: rgb(238, 238, 238);
+    color: $white;
   }
 
   .hero-container {
@@ -24,14 +24,16 @@ $hero-bg-color: rgb(26, 20, 32);
         margin: auto;
 
         .title {
+          @extend .flex-row;
+
           .main {
-            display: inline-block;
             @extend .accent-font-color;
+            @extend .margin-0;
             @extend .margin-right-2;
           }
 
           .sub {
-            color: white;
+            color: $white;
             font-size: 2em;
             font-weight: 200;
           }
@@ -44,6 +46,7 @@ $hero-bg-color: rgb(26, 20, 32);
 
         .tagline {
           font-size: 1em;
+          color: $white;
         }
       }
     }
@@ -72,10 +75,10 @@ $hero-bg-color: rgb(26, 20, 32);
       .card {
         position: relative;
         min-height: 100px;
-        background: white;
+        background: $white;
         @extend .margin-3;
-        @extend .padding-left-5;
-        @extend .padding-right-5;
+        @extend .padding-left-4;
+        @extend .padding-right-4;
 
         .content {
           @extend .margin-3;
@@ -88,33 +91,14 @@ $hero-bg-color: rgb(26, 20, 32);
           }
 
           p {
-            color: black;
+            color: $black;
           }
         }
 
-        .lcu-icon {
+        .icon {
           background: $orange;
           width: 70px;
           height: 70px;
-
-          .mat-icon {
-            color: white;
-            font-size: 1.5em;
-          }
-        }
-
-        .lcu-icon-sm .mat-icon {
-          @extend .padding-2;
-        }
-
-        .lcu-icon-sm {
-          border-top-left-radius: 5px;
-          border-top-right-radius: 5px;
-          width: 100%;
-          height: 70px;
-        }
-
-        .lcu-icon-lg {
           left: -30px;
           padding: 10px;
           top: calc(50% - 70px);
@@ -123,6 +107,11 @@ $hero-bg-color: rgb(26, 20, 32);
           border-radius: 5px;
           overflow: hidden;
           filter: drop-shadow(0 0 15px #333);
+
+          .mat-icon {
+            color: $white;
+            font-size: 1.5em;
+          }
         }
       }
     }
@@ -141,8 +130,9 @@ $hero-bg-color: rgb(26, 20, 32);
     .hero-header {
       .hero-content {
         .title {
+          @extend .flex-column;
+
           .main {
-            display: block;
             @extend .margin-right-0;
           }
 
@@ -166,6 +156,7 @@ $hero-bg-color: rgb(26, 20, 32);
     @extend .flex-column;
 
     .cta-action {
+      display: block;
       width: 100%;
 
       .mat-button {

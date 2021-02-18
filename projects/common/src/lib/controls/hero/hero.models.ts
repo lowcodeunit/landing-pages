@@ -5,14 +5,24 @@ export class LandingPagesHeroElementState {}
 
 export class LandingPagesHeroContext extends LCUElementContext<LandingPagesHeroElementState> {
   /**
-   * Where to open linked document
+   * Hero Action
    */
   public Action?: LCUActionState;
 
   /**
-   * Background image that sits below hero container content
+   * Background image
    */
   public BackgroundImage?: string;
+
+  /**
+   * Background color
+   */
+  public BackgroundColor?: string;
+
+  /**
+   * Image for Hero
+   */
+  public Image?: string;
 
   /**
    * Card reason: e.g. 'Help breweries be super cool, because...!'
