@@ -38,6 +38,6 @@ export class LandingPagesBlocksElementComponent
 
   //  Helpers
   protected setContext(): void {
-    this.SetContext(this.settings.State.LandingPage);
+    this.Context = this.settings.State.LandingPage;
   }
 }
