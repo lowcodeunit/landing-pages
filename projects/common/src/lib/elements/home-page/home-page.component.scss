@@ -290,7 +290,7 @@ $hero-bg-color: rgb(26, 20, 32);
     .call-to-action {
       .call-to-action-container {
         .content {
-          min-width: 400px;
+          min-width: 350px;
         }
       }
     }
@@ -369,11 +369,14 @@ $hero-bg-color: rgb(26, 20, 32);
     }
 
     .call-to-action {
+      text-align: center;
+
       .call-to-action-container {
         @extend .flex-column;
 
         .content {
-          min-width: 350px;
+          width: 100%;
+          min-width: 300px;
         }
       }
     }
