@@ -20,6 +20,7 @@ export class BlocksComponent implements OnInit {
     this.BlocksLandingPageContext = {
       CallToAction: {
         Action: {
+          Color: 'primary',
           Text: 'Sign up today',
           Target: '_blank',
           Path: '#',
