@@ -18,6 +18,11 @@ export class LandingPagesHomePageContext extends LCUElementContext<LandingPagesH
   public Hero?: LandingPagesHeroContext;
 
   /**
+   * Hero model
+   */
+  public HeroCallToAction?: LandingPagesCallToActionContext;
+
+  /**
    * Card info
    */
   public InfoCards?: LandingPagesInfoCardContext[];

@@ -4,9 +4,15 @@
   class="home-page"
   *ngIf="Context"
 >
-  <landing-pages-hero-element
-    [context]="Context.Hero"
-  ></landing-pages-hero-element>
+  <div class="header-container">
+    <landing-pages-hero-element
+      [context]="Context.Hero"
+    ></landing-pages-hero-element>
+
+    <landing-pages-call-to-action-element
+      [context]="Context.HeroCallToAction"
+    ></landing-pages-call-to-action-element>
+  </div>
 
   <div fxLayoutAlign="center" class="main-container">
     <div class="inner-container">

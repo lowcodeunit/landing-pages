@@ -24,13 +24,13 @@
       ></lcu-action>
     </div>
 
-    <mat-card class="hero-image" *ngIf="Context.Image">
+    <div class="hero-image" *ngIf="Context.Image">
       <img [src]="Context.Image" [alt]="Context.Title" />
-    </mat-card>
+    </div>
   </div>
 
   <div
     class="hero-background"
-    [style.background-image]="'url(' + Context.BackgroundImage + ')'"
+    [style.background-image]="Context.BackgroundImage"
   ></div>
 </div>

@@ -20,8 +20,8 @@ export class HomeComponent implements OnInit {
     this.HomePageLandingPageContext = {
       Hero: {
         Message: `Don't wait for the right hire, use the team you have.  Take control of Cloud.`,
-        SubTitle: 'Virtual Developers',
-        Title: 'Fathym Cloud',
+        SubTitle: 'with Virtual Developers',
+        Title: 'Supercharge Cloud',
         Action: {
           Text: 'Get started for free',
           Target: '_blank',
@@ -29,8 +29,22 @@ export class HomeComponent implements OnInit {
           Color: 'accent',
           Raised: true,
         },
-        Image: './assets/images/fathym-cloud-dashboard.png',
+        Image: './assets/images/fathym-cloud.svg',
         // BackgroundColor: 'green',
+        BackgroundImage: 'url(./assets/images/background-wave-fathym.svg)',
+      },
+      HeroCallToAction: {
+        // Action: {
+        //   Text: 'Sign up today',
+        //   Target: '_blank',
+        //   Path: '#',
+        //   Color: 'accent',
+        //   Raised: true,
+        // },
+        // Title: 'Sign up for free',
+        Message:
+          'Modular and reusable components and tools that help your team deliver repeatable, low-code solutions.',
+        Image: './assets/images/fathym-cloud-dashboard.png',
       },
       InfoCards: [
         {
