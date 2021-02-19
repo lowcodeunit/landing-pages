@@ -313,6 +313,10 @@ $hero-bg-color: rgb(26, 20, 32);
         }
       }
     }
+
+    .call-to-action {
+      @extend .padding-4;
+    }
   }
 
   .main-container {
@@ -330,6 +334,10 @@ $hero-bg-color: rgb(26, 20, 32);
       .call-to-action-container {
         .content {
           min-width: 350px;
+        }
+
+        .cta-image {
+          filter: drop-shadow(0 0 11px #333);
         }
       }
     }
@@ -399,12 +407,17 @@ $hero-bg-color: rgb(26, 20, 32);
     }
 
     .call-to-action {
-      width: 90%;
+      width: 95%;
+      @extend .padding-3;
 
       .content {
         .message {
           @extend .mat-title;
         }
+      }
+
+      .cta-image {
+        filter: drop-shadow(0 0 7px #333);
       }
     }
   }
