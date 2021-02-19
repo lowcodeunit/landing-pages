@@ -79,7 +79,8 @@ $hero-bg-color: rgb(26, 20, 32);
             @extend .margin-top-3;
 
             .mat-button-base {
-              // color: $black;
+              color: $white;
+              background-color: #ff9800;
               @extend .mat-button-large;
             }
           }
@@ -230,7 +231,8 @@ $hero-bg-color: rgb(26, 20, 32);
 
           .mat-button-base {
             text-align: center;
-            color: $black;
+            color: $white;
+            background-color: #ff9800;
             @extend .mat-button-large;
           }
         }
