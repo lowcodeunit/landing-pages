@@ -102,7 +102,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "extractLicenses": true,
               "vendorChunk": false,
@@ -280,119 +279,6 @@
           "configurations": {
             "production": {
               "devServerTarget": "demo:serve:production"
-            }
-          }
-        }
-      }
-    },
-    "blocks": {
-      "projectType": "application",
-      "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        }
-      },
-      "root": "projects/blocks",
-      "sourceRoot": "projects/blocks/src",
-      "prefix": "lcu",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/blocks",
-            "index": "projects/blocks/src/index.html",
-            "main": "projects/blocks/src/main.ts",
-            "polyfills": "projects/blocks/src/polyfills.ts",
-            "tsConfig": "projects/blocks/tsconfig.app.json",
-            "aot": true,
-            "assets": [
-              "projects/blocks/src/favicon.ico",
-              "projects/blocks/src/assets",
-              {
-                "glob": "package.json",
-                "input": "./projects/blocks/",
-                "output": "/"
-              }
-            ],
-            "styles": [
-              "projects/blocks/src/styles.scss"
-            ],
-            "scripts": []
-          },
-          "configurations": {
-            "production": {
-              "fileReplacements": [
-                {
-                  "replace": "projects/blocks/src/environments/environment.ts",
-                  "with": "projects/blocks/src/environments/environment.prod.ts"
-                }
-              ],
-              "optimization": true,
-              "outputHashing": "all",
-              "sourceMap": false,
-              "namedChunks": false,
-              "extractLicenses": true,
-              "vendorChunk": false,
-              "buildOptimizer": true
-            }
-          }
-        },
-        "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
-          "options": {
-            "browserTarget": "blocks:build"
-          },
-          "configurations": {
-            "production": {
-              "browserTarget": "blocks:build:production"
-            }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "blocks:build"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/blocks/src/test.ts",
-            "polyfills": "projects/blocks/src/polyfills.ts",
-            "tsConfig": "projects/blocks/tsconfig.spec.json",
-            "karmaConfig": "projects/blocks/karma.conf.js",
-            "assets": [
-              "projects/blocks/src/favicon.ico",
-              "projects/blocks/src/assets"
-            ],
-            "styles": [
-              "projects/blocks/src/styles.scss"
-            ],
-            "scripts": []
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/blocks/tsconfig.app.json",
-              "projects/blocks/tsconfig.spec.json",
-              "projects/blocks/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "projects/blocks/e2e/protractor.conf.js",
-            "devServerTarget": "blocks:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "blocks:serve:production"
             }
           }
         }

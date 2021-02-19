@@ -1,0 +1,22 @@
+<div
+  ngClass.lt-md="lt-md"
+  ngClass.lt-sm="lt-sm"
+  class="home-page"
+  *ngIf="Context"
+>
+  <landing-pages-hero-element
+    [context]="Context.Hero"
+  ></landing-pages-hero-element>
+
+  <div fxLayoutAlign="center" class="main-container">
+    <div class="inner-container">
+      <landing-pages-info-cards-element
+        [context]="Context.InfoCards"
+      ></landing-pages-info-cards-element>
+
+      <landing-pages-call-to-action-element
+        [context]="Context.CallToAction"
+      ></landing-pages-call-to-action-element>
+    </div>
+  </div>
+</div>

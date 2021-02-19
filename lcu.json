@@ -11,6 +11,24 @@
 		"solutions": {
 			"template": {
 				"element": "landing-pages-template-element"
+			},
+			"blocks": {
+				"element": "landing-pages-blocks-element"
+			},
+			"home-page": {
+				"element": "landing-pages-home-page-element"
+			},
+			"hero": {
+				"element": "landing-pages-hero-element"
+			},
+			"info-card": {
+				"element": "landing-pages-info-card-element"
+			},
+			"call-to-action": {
+				"element": "landing-pages-call-to-action-element"
+			},
+			"info-cards": {
+				"element": "landing-pages-info-cards-element"
 			}
 		},
 		"elements": {},

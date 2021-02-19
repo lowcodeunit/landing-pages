@@ -1,0 +1,36 @@
+<div class="hero-container" *ngIf="Context">
+  <div class="hero-header">
+    <div [innerHTML]="BackgroundColorStyle"></div>
+
+    <div class="hero-content">
+      <div class="title">
+        <h1 class="main" *ngIf="Context.Title">
+          {{ Context.Title }}
+        </h1>
+
+        <span class="sub" *ngIf="Context.SubTitle">
+          {{ Context.SubTitle }}
+        </span>
+      </div>
+
+      <div class="divider-fill-hor"></div>
+
+      <div class="tagline" [innerHTML]="Context.Message"></div>
+
+      <lcu-action
+        class="hero-action"
+        [action]="Context.Action"
+        (action-click)="ActionClicked($event)"
+      ></lcu-action>
+    </div>
+
+    <mat-card class="hero-image" *ngIf="Context.Image">
+      <img [src]="Context.Image" [alt]="Context.Title" />
+    </mat-card>
+  </div>
+
+  <div
+    class="hero-background"
+    [style.background-image]="'url(' + Context.BackgroundImage + ')'"
+  ></div>
+</div>
