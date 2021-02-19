@@ -29,8 +29,7 @@ $hero-bg-color: rgb(26, 20, 32);
         margin: auto;
         @extend .padding-5;
         @extend .flex-row;
-        align-items: center;
-        justify-content: center;
+        @extend .flex-row-center;
 
         .divider-fill-hor {
           display: none;
@@ -164,12 +163,13 @@ $hero-bg-color: rgb(26, 20, 32);
         box-shadow: none;
         @extend .margin-top-5;
         @extend .flex-row;
+        @extend .flex-row-center;
 
         .icon {
           border-radius: 5px;
           filter: drop-shadow(0 0 15px #333);
           text-align: center;
-          @extend .margin-x-4;
+          @extend .margin-5;
 
           .mat-icon {
             color: $white;
@@ -183,14 +183,15 @@ $hero-bg-color: rgb(26, 20, 32);
           @extend .margin-4;
           @extend .margin-top-5;
 
-          h3 {
+          .title {
             color: mat-color($primary);
             @extend .mat-display-2;
             @extend .margin-bottom-1;
           }
 
-          p {
+          .info {
             color: $black;
+            max-width: 400px;
           }
         }
       }
@@ -275,11 +276,17 @@ $hero-bg-color: rgb(26, 20, 32);
 
   .main-container {
     .card-container {
+      margin: auto;
+
       .card {
         @extend .margin-top-3;
 
+        .icon {
+          @extend .margin-4;
+        }
+
         .content {
-          h3 {
+          .title {
             // @extend .mat-display-1;
           }
         }
@@ -355,7 +362,7 @@ $hero-bg-color: rgb(26, 20, 32);
           }
 
           .tagline {
-            @extend .padding-left-3;
+            margin: auto;
           }
 
           .hero-action {
@@ -372,6 +379,12 @@ $hero-bg-color: rgb(26, 20, 32);
           @extend .margin-top-4;
           @extend .margin-left-0;
         }
+      }
+
+      .hero-image {
+        width: 90%;
+        height: 300px;
+        @extend .margin-left-3;
       }
 
       .hero-background {

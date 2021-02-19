@@ -19,9 +19,9 @@ export class HomeComponent implements OnInit {
   public ngOnInit(): void {
     this.HomePageLandingPageContext = {
       Hero: {
-        Message: `Don't wait for the right hire, use the team you have.  Take control of Cloud.`,
-        SubTitle: 'with Virtual Developers',
         Title: 'Supercharge Cloud',
+        SubTitle: 'with Virtual Developers',
+        Message: `Don't wait for the right hire, use the team you have.  Take control of Cloud.`,
         Action: {
           Text: 'Get started for free',
           Target: '_blank',
@@ -30,44 +30,31 @@ export class HomeComponent implements OnInit {
           Raised: true,
         },
         Image: './assets/images/fathym-cloud.svg',
-        // BackgroundColor: 'green',
         BackgroundImage: 'url(./assets/images/background-wave-fathym.svg)',
       },
       HeroCallToAction: {
-        // Action: {
-        //   Text: 'Sign up today',
-        //   Target: '_blank',
-        //   Path: '#',
-        //   Color: 'accent',
-        //   Raised: true,
-        // },
-        // Title: 'Sign up for free',
         Message:
           'Modular and reusable components and tools that help your team deliver repeatable, low-code solutions.',
         Image: './assets/images/fathym-cloud-dashboard.png',
       },
       InfoCards: [
         {
-          Icon: 'backup',
-          Info: `Accelerate adoption and usage of cloud-native technology with Fathym's Virtual Developers.`,
-          Title: 'Accelerate Solutions',
-        },
-        {
-          Icon: 'insert_chart',
+          Icon: 'auto_awesome',
           Info:
-            'Easily access data for use in 3rd party dashboards and reports.',
-          Title: 'Access Data',
+            'Teams get value from their Cloud on day one, skipping the multi-month learning curves and tedius hiring processes.',
+          Title: 'Accelerate',
         },
         {
-          Icon: 'backup',
-          Info: `Accelerate adoption and usage of cloud-native technology with Fathym's Virtual Developers.`,
-          Title: 'Accelerate Solutions',
-        },
-        {
-          Icon: 'insert_chart',
+          Icon: 'apps',
           Info:
-            'Easily access data for use in 3rd party dashboards and reports.',
-          Title: 'Access Data',
+            'Deliver your solutions faster and more reliably on cloud infrastructure, with out the massive learning curve.',
+          Title: 'Deliver',
+        },
+        {
+          Icon: 'cloud',
+          Info:
+            'Bring control to adoption and usage of cloud-native technology with best practices anyone on the team can leverage, today.',
+          Title: 'Control',
         },
       ],
       CallToAction: {

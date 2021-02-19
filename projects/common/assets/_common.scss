@@ -63,6 +63,11 @@ html {
   flex-direction: row;
 }
 
+.flex-row-center {
+  align-items: center;
+  justify-content: center;
+}
+
 .mat-button-large {
   line-height: 48px;
   font-size: 18px;
@@ -71,5 +76,5 @@ html {
 }
 
 .mat-round {
-  border-radius: .5em;
+  border-radius: 0.5em;
 }
