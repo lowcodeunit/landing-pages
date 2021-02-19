@@ -146,7 +146,6 @@ $hero-bg-color: rgb(26, 20, 32);
   .main-container {
     font-size: 1.75em;
     @extend .margin-top-3;
-    @extend .margin-bottom-3;
 
     .inner-container {
       width: 100%;
@@ -213,7 +212,8 @@ $hero-bg-color: rgb(26, 20, 32);
       color: $white;
       border-top-left-radius: 2em;
       border-top-right-radius: 2em;
-      background-color: mat-color($primary);
+      // background-color: mat-color($primary);
+      background: linear-gradient(to top, mat-color($primary), mat-color($accent, 700));
 
       .call-to-action-container {
         width: 80%;
