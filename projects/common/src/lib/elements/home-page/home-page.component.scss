@@ -65,7 +65,7 @@ $hero-bg-color: rgb(26, 20, 32);
           .tagline {
             color: $white;
             max-width: 400px;
-            @extend .mat-subheading-2;
+            @extend .mat-title;
             @extend .padding-top-4;
             @extend .padding-right-3;
             @extend .padding-bottom-3;
@@ -169,7 +169,7 @@ $hero-bg-color: rgb(26, 20, 32);
           border-radius: 5px;
           filter: drop-shadow(0 0 15px #333);
           text-align: center;
-          @extend .margin-5;
+          @extend .margin-x-5;
 
           .mat-icon {
             color: $white;
@@ -283,7 +283,7 @@ $hero-bg-color: rgb(26, 20, 32);
         @extend .margin-top-3;
 
         .icon {
-          @extend .margin-4;
+          @extend .margin-x-4;
         }
 
         .content {
@@ -427,10 +427,6 @@ $hero-bg-color: rgb(26, 20, 32);
     .card-container {
       .card {
         @extend .flex-column;
-
-        .icon {
-          @extend .margin-right-0;
-        }
       }
 
       &:nth-child(2n) {
