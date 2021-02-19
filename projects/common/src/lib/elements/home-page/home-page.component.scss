@@ -192,6 +192,7 @@ $hero-bg-color: rgb(26, 20, 32);
           .info {
             color: $black;
             max-width: 400px;
+            @extend .mat-title;
           }
         }
       }
