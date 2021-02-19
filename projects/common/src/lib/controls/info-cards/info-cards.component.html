@@ -1,0 +1,10 @@
+<ng-container *ngIf="Context">
+  <div
+    class="card-container"
+    *ngFor="let card of Context; let i = index"
+  >
+    <landing-pages-info-card-element
+      [context]="card"
+    ></landing-pages-info-card-element>
+  </div>
+</ng-container>

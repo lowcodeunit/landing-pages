@@ -1,0 +1,15 @@
+<div class="call-to-action" *ngIf="Context">
+  <div class="call-to-action-container">
+    <div class="content">
+      <h2 class="title">{{ Context.Title }}</h2>
+
+      <p class="message">{{ Context.Message }}</p>
+    </div>
+
+    <lcu-action
+      class="cta-action"
+      [action]="Context.Action"
+      (action-click)="ActionClicked($event)"
+    ></lcu-action>
+  </div>
+</div>

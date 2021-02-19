@@ -1,0 +1,71 @@
+@import "../../../node_modules/@lcu/common/assets/theming/common-theme";
+@import "../../../node_modules/@lcu/common/assets/styles/utils/margins-padding";
+@import "../../../node_modules/@lcu/common/assets/styles/utils/fathym-cursors";
+
+$global-theme: fathym-ivy-theme(true);
+
+$primary: map-get($global-theme, primary);
+$accent: map-get($global-theme, accent);
+$warn: map-get($global-theme, warn);
+
+$orange-accent: map-get($mat-orange, 500);
+$green-accent: map-get($mat-green, 400);
+$yellow-accent: map-get($mat-yellow, 600);
+
+$divider-size: 5px;
+$divider: mat-color($primary);
+
+$black: rgb(17, 17, 17);
+$white: rgb(238, 238, 238);
+$orange: #f12711;
+$hero-bg-color: rgb(26, 20, 32);
+
+* {
+  // margin: 0;
+  // padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.accent-font-color {
+  color: mat-color($accent);
+}
+
+.divider-fill-vert {
+  background-color: $divider;
+  min-height: 100%;
+  top: 10%;
+  bottom: 10%;
+  min-width: $divider-size;
+}
+
+.divider-fill-hor {
+  background-color: $divider;
+  height: $divider-size;
+  width: 100%;
+}
+
+.flex-column {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.mat-button-large {
+  line-height: 48px;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0 24px !important;
+}

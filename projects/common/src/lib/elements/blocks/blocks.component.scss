@@ -1,0 +1,191 @@
+@import "../../../../assets/common";
+
+$orange: #f12711;
+$hero-bg-color: rgb(26, 20, 32);
+
+:host ::ng-deep{
+  overflow: auto;
+  display: block;
+  min-height: calc(100vh - 64px);
+  background: radial-gradient(#525252, #131313);
+
+  p {
+    font-size: 0.5em;
+    color: $white;
+  }
+
+  .hero-container {
+    .hero-header {
+      @extend .padding-5;
+      background-color: $hero-bg-color;
+
+      .hero-content {
+        width: 60%;
+        margin: auto;
+
+        .title {
+          @extend .flex-row;
+
+          .main {
+            @extend .accent-font-color;
+            @extend .margin-0;
+            @extend .margin-right-2;
+          }
+
+          .sub {
+            color: $white;
+            font-size: 2em;
+            font-weight: 200;
+          }
+        }
+
+        .divider-fill-hor {
+          @extend .margin-top-4;
+          @extend .margin-bottom-4;
+        }
+
+        .tagline {
+          font-size: 1em;
+          color: $white;
+        }
+      }
+    }
+
+    .hero-background {
+      position: absolute;
+      z-index: -1;
+      height: 200px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      clip-path: inset(0 0 0 0);
+      -webkit-filter: blur(5px);
+    }
+  }
+
+  .main-container {
+    font-size: 1.75em;
+    @extend .margin-top-3;
+    @extend .margin-bottom-3;
+
+    .card-container {
+      @extend .flex-column;
+
+      .card {
+        position: relative;
+        min-height: 100px;
+        background: $white;
+        @extend .margin-3;
+        @extend .padding-left-4;
+        @extend .padding-right-4;
+
+        .content {
+          @extend .margin-3;
+          @extend .flex-column;
+
+          h3 {
+            font-size: 0.85em;
+            color: $orange;
+            @extend .margin-bottom-1;
+          }
+
+          p {
+            color: $black;
+          }
+        }
+
+        .icon {
+          background: $orange;
+          width: 70px;
+          height: 70px;
+          left: -30px;
+          padding: 10px;
+          top: calc(50% - 70px);
+          position: absolute;
+          z-index: 1;
+          border-radius: 5px;
+          overflow: hidden;
+          filter: drop-shadow(0 0 15px #333);
+
+          .mat-icon {
+            color: $white;
+            font-size: 1.5em;
+          }
+        }
+      }
+    }
+
+    .call-to-action {
+      align-items: flex-end;
+      place-content: flex-end center;
+      @extend .flex-row;
+    }
+  }
+
+  .action-button {
+    background-color: #f12711;
+  }
+}
+
+.blocks.lt-md ::ng-deep,
+.blocks.lt-sm ::ng-deep {
+  .hero-container {
+    .hero-header {
+      .hero-content {
+        .title {
+          @extend .flex-column;
+
+          .main {
+            @extend .margin-right-0;
+          }
+
+          .sub {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .main-container {
+    .card-container {
+      .card {
+        @extend .flex-column;
+      }
+    }
+  }
+
+  .call-to-action {
+    @extend .flex-column;
+
+    .cta-action {
+      display: block;
+      width: 100%;
+
+      .mat-button {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.blocks.lt-md ::ng-deep {
+  .hero-container {
+    .hero-header {
+      .hero-content {
+        width: 85%;
+      }
+    }
+  }
+}
+
+.blocks.lt-sm ::ng-deep {
+  .hero-container {
+    .hero-header {
+      .hero-content {
+        width: 100%;
+      }
+    }
+  }
+}

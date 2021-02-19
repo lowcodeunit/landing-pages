@@ -1,0 +1,11 @@
+<mat-card class="card" *ngIf="Context">
+  <div class="icon">
+    <mat-icon>{{ Context.Icon }}</mat-icon>
+  </div>
+
+  <div class="content">
+    <h3>{{ Context.Title }}</h3>
+
+    <p>{{ Context.Info }}</p>
+  </div>
+</mat-card>
