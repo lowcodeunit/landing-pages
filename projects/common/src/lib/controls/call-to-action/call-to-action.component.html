@@ -13,12 +13,17 @@
       *ngIf="Context.Action"
     ></lcu-action>
 
-    <img class="cta-image" [src]="Context.Image" [alt]="Context.Title || Context.Message || 'Call to Action'" *ngIf="Context.Image"/>
+    <img
+      class="cta-image"
+      [src]="Context.Image"
+      [alt]="Context.Title || Context.Message || 'Call to Action'"
+      *ngIf="Context.Image"
+    />
 
     <div
       class="cta-background"
       [style.background-image]="Context.BackgroundImage"
+      *ngIf="Context.BackgroundImage"
     ></div>
   </div>
-
 </div>
