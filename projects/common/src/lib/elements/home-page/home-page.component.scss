@@ -3,6 +3,19 @@
 $orange: #f12711;
 $hero-bg-color: rgb(26, 20, 32);
 
+.with-background {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 :host ::ng-deep {
   overflow: auto;
   display: block;
@@ -104,41 +117,40 @@ $hero-bg-color: rgb(26, 20, 32);
       }
 
       .hero-background {
-        position: absolute;
-        display: block;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        overflow: hidden;
-        z-index: -1;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
+        @extend .with-background;
       }
     }
 
     .call-to-action {
+      position: relative;
       text-align: center;
       width: 80%;
+      min-height: 500px;
       max-width: 1000px;
       margin: auto;
       overflow: auto;
       @extend .padding-5;
 
-      .content {
-        @extend .margin-top-5;
-        @extend .margin-bottom-5;
+      .call-to-action-container {
+        .content {
+          @extend .margin-top-5;
+          @extend .margin-bottom-5;
 
-        .message {
-          color: mat-color($accent, 900);
-          @extend .mat-display-1;
+          .message {
+            color: mat-color($accent, 900);
+            @extend .mat-display-1;
+          }
+        }
+
+        .cta-image {
+          width: 100%;
+          filter: drop-shadow(0 0 15px #333);
+          @extend .mat-round;
         }
       }
 
-      .cta-image {
-        width: 100%;
-        filter: drop-shadow(0 0 15px #333);
-        @extend .mat-round;
+      .cta-background {
+        @extend .with-background;
       }
     }
   }
@@ -205,21 +217,29 @@ $hero-bg-color: rgb(26, 20, 32);
     }
 
     .call-to-action {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 300px;
+      min-height: 600px;
       color: $white;
+      overflow: auto;
       border-top-left-radius: 2em;
       border-top-right-radius: 2em;
-      // background-color: mat-color($primary);
-      background: linear-gradient(to top, mat-color($primary), mat-color($accent, 700));
+      // background: linear-gradient(
+      //   to top,
+      //   mat-color($primary),
+      //   mat-color($accent, 700)
+      // );
 
       .call-to-action-container {
         width: 80%;
         max-width: 1000px;
         margin: auto;
+        margin-top: 13em;
+        @extend .padding-bottom-4;
         @extend .flex-row;
+        @extend .flex-row-center;
 
         .content {
           width: 50%;
@@ -227,7 +247,7 @@ $hero-bg-color: rgb(26, 20, 32);
         }
 
         .cta-action {
-          margin: auto;
+          margin: auto 2em;
 
           .mat-button-base {
             text-align: center;
@@ -236,6 +256,10 @@ $hero-bg-color: rgb(26, 20, 32);
             @extend .mat-button-large;
           }
         }
+      }
+
+      .cta-background {
+        @extend .with-background;
       }
     }
   }

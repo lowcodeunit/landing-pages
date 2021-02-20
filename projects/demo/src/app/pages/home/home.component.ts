@@ -68,6 +68,7 @@ export class HomeComponent implements OnInit {
         Title: 'Sign up for free',
         Message:
           'Learn how fathym can save thousands of dollars in time and efficiency.',
+        BackgroundImage: 'url(./assets/images/background-wave-cta-fathym.svg)',
       },
     };
   }

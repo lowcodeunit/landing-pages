@@ -10,6 +10,16 @@ export class LandingPagesCallToActionContext extends LCUElementContext<LandingPa
   public Action?: LCUActionState;
 
   /**
+   * Background image
+   */
+  public BackgroundImage?: string;
+
+  /**
+   * Background color
+   */
+  public BackgroundColor?: string;
+
+  /**
    * Image for call to action
    */
   public Image?: string;
