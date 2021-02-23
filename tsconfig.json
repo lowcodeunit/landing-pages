@@ -16,6 +16,10 @@
 			"dom"
 		],
 		"paths": {
+			"@lowcodeunit/landing-pages-lcu": [
+				"dist/lcu-parts/lcu",
+				"dist/lcu"
+			],
 			"@lowcodeunit/landing-pages-lcu-parts": [
 				"dist/lcu-parts/lcu-parts",
 				"dist/lcu-parts"
