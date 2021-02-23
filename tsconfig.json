@@ -16,9 +16,9 @@
 			"dom"
 		],
 		"paths": {
-			"@lowcodeunit/landing-pages-common": [
-				"dist/common/common",
-				"dist/common"
+			"@lowcodeunit/landing-pages-lcu-parts": [
+				"dist/lcu-parts/lcu-parts",
+				"dist/lcu-parts"
 			]
 		},
 		"noImplicitAny": true,

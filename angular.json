@@ -283,6 +283,46 @@
           }
         }
       }
+    },
+    "lcu-parts": {
+      "projectType": "library",
+      "root": "projects/lcu-parts",
+      "sourceRoot": "projects/lcu-parts/src",
+      "prefix": "lcu",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "tsConfig": "projects/lcu-parts/tsconfig.lib.json",
+            "project": "projects/lcu-parts/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/lcu-parts/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/lcu-parts/src/test.ts",
+            "tsConfig": "projects/lcu-parts/tsconfig.spec.json",
+            "karmaConfig": "projects/lcu-parts/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lcu-parts/tsconfig.lib.json",
+              "projects/lcu-parts/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "lcu",
