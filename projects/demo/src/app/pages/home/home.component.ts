@@ -36,12 +36,15 @@ export class HomeComponent implements OnInit {
         Message:
           'Modular and reusable components and tools that help your team deliver repeatable, low-code solutions.',
         // Image: './assets/images/fathym-cloud-dashboard.png',
-        Elements: { 'lcu-billing-plan-view-element': 'Billing.LCU' },
+        Elements: [
+          { Name: 'lcu-billing-plan-view-element', StateKey: 'Billing' },
+        ],
       },
       // HeroCallToAction: {
       //   Message:
       //     'Modular and reusable components and tools that help your team deliver repeatable, low-code solutions.',
       //   Image: './assets/images/fathym-cloud-dashboard.png',
+      //   IsRestricted: true
       // },
       InfoCards: [
         {
@@ -88,6 +91,8 @@ export class HomeComponent implements OnInit {
         },
       },
     };
+
+    this.HomePageLandingPageContext.CallToAction.ElementConfigs = this.HomePageLandingPageContext.HeroCallToAction.ElementConfigs = this.HomePageLandingPageContext.ElementConfigs;
   }
 
   //  API Methods

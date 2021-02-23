@@ -43,5 +43,7 @@ export class LandingPagesHomePageElementComponent
   //  Helpers
   protected setContext(): void {
     this.Context = this.settings.State.LandingPage;
+
+    this.Context.CallToAction.ElementConfigs = this.Context.HeroCallToAction.ElementConfigs = this.Context.ElementConfigs;
   }
 }

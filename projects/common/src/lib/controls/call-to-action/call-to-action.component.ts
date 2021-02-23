@@ -20,9 +20,6 @@ export class LandingPagesCallToActionElementComponent
   //  Properties
   public BackgroundColorStyle: SafeHtml;
 
-  @Input('element-configs')
-  public ElementConfigs?: { [key: string]: LazyElementConfig };
-
   //  Constructors
   constructor(protected injector: Injector, protected sanitizer: DomSanitizer) {
     super(injector);

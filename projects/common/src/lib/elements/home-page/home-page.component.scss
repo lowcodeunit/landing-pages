@@ -124,13 +124,15 @@ $hero-bg-color: rgb(26, 20, 32);
     .call-to-action {
       // position: relative;
       text-align: center;
-      width: 80%;
       min-height: 500px;
-      max-width: 1000px;
       margin: auto;
       overflow: auto;
       @extend .padding-5;
 
+      &.restricted {
+        width: 80%;
+        max-width: 1000px;
+      }
       .call-to-action-container {
         .content {
           @extend .margin-top-5;

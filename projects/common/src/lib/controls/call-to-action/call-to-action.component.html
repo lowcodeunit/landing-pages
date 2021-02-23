@@ -1,4 +1,8 @@
-<div class="call-to-action" *ngIf="Context">
+<div
+  class="call-to-action"
+  [class.restricted]="Context.IsRestricted"
+  *ngIf="Context"
+>
   <div class="call-to-action-container">
     <div class="content" *ngIf="Context.Title || Context.Message">
       <h2 class="title" *ngIf="Context.Title">{{ Context.Title }}</h2>
@@ -22,8 +26,8 @@
 
     <lcu-lazy-elements
       class="cta-elements"
-      [elements]="Context?.Elements"
-      [configs]="ElementConfigs"
+      [elements]="Context.Elements"
+      [configs]="Context.ElementConfigs"
     ></lcu-lazy-elements>
 
     <div
