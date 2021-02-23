@@ -35,8 +35,14 @@ export class HomeComponent implements OnInit {
       HeroCallToAction: {
         Message:
           'Modular and reusable components and tools that help your team deliver repeatable, low-code solutions.',
-        Image: './assets/images/fathym-cloud-dashboard.png',
+        // Image: './assets/images/fathym-cloud-dashboard.png',
+        Elements: { 'lcu-billing-plan-view-element': 'Billing.LCU' },
       },
+      // HeroCallToAction: {
+      //   Message:
+      //     'Modular and reusable components and tools that help your team deliver repeatable, low-code solutions.',
+      //   Image: './assets/images/fathym-cloud-dashboard.png',
+      // },
       InfoCards: [
         {
           Icon: 'auto_awesome',
@@ -69,6 +75,17 @@ export class HomeComponent implements OnInit {
         Message:
           'Learn how fathym can save thousands of dollars in time and efficiency.',
         BackgroundImage: 'url(./assets/images/background-wave-cta-fathym.svg)',
+      },
+      ElementConfigs: {
+        'lcu-billing-plan-view-element': {
+          Scripts: [
+            'https://www.iot-ensemble.com/_lcu/lcu-billing-lcu/wc/lcu-billing.lcu.js',
+          ],
+          Styles: [
+            // "https://www.iot-ensemble.com/_lcu/lcu-billing-lcu/wc/lcu-billing.lcu.css",
+          ],
+          ElementName: 'lcu-billing-plan-view-element',
+        },
       },
     };
   }

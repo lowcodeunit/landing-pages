@@ -20,6 +20,12 @@
       *ngIf="Context.Image"
     />
 
+    <lcu-lazy-elements
+      class="cta-elements"
+      [elements]="Context?.Elements"
+      [configs]="ElementConfigs"
+    ></lcu-lazy-elements>
+
     <div
       class="cta-background"
       [style.background-image]="Context.BackgroundImage"

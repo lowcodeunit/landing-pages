@@ -1,6 +1,7 @@
-import { Component, OnChanges, OnInit, Injector } from '@angular/core';
+import { Component, OnChanges, OnInit, Injector, Input } from '@angular/core';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { LCUElementContext, LcuElementComponent } from '@lcu/common';
+import { LazyElementConfig } from '@lowcodeunit/lazy-element';
 import { LandingPagesCallToActionContext } from './call-to-action.models';
 
 export const SELECTOR_LANDING_PAGES_CALL_TO_ACTION_ELEMENT =
@@ -18,6 +19,9 @@ export class LandingPagesCallToActionElementComponent
 
   //  Properties
   public BackgroundColorStyle: SafeHtml;
+
+  @Input('element-configs')
+  public ElementConfigs?: { [key: string]: LazyElementConfig };
 
   //  Constructors
   constructor(protected injector: Injector, protected sanitizer: DomSanitizer) {

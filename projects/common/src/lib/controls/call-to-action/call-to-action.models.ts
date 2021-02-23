@@ -1,5 +1,6 @@
 import { LCUActionState } from '@lowcodeunit/app-host-common';
 import { LCUElementContext } from '@lcu/common';
+import { LazyElementConfig } from '@lowcodeunit/lazy-element';
 
 export class LandingPagesCallToActionElementState {}
 
@@ -18,6 +19,11 @@ export class LandingPagesCallToActionContext extends LCUElementContext<LandingPa
    * Background color
    */
   public BackgroundColor?: string;
+
+  /**
+   * Custom elements for rendering
+   */
+  public Elements?: { [elCfg: string]: string };
 
   /**
    * Image for call to action

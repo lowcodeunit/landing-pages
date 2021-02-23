@@ -44,7 +44,7 @@
     "@lcu/common": "^1.76.677",
     "@lowcodeunit-devkit/ng-lcu": "^1.26.150",
     "@lowcodeunit/app-host-common": "^1.1.41-add-button-color",
-    "@lowcodeunit/lazy-element": "^1.8.17",
+    "@lowcodeunit/lazy-element": "^1.11.28",
     "@lowcodeunit/lcu-documentation-common": "^1.6.38",
     "@webcomponents/custom-elements": "^1.4.3",
     "@webcomponents/webcomponentsjs": "^2.5.0",
