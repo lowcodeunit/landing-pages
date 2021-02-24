@@ -3,7 +3,7 @@ import { SELECTOR_LANDING_PAGES_INFO_CARDS_ELEMENT } from '@lowcodeunit/landing-
 import { NgModule, DoBootstrap, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FathymSharedModule, LCUServiceSettings } from '@lcu/common';
+import { FathymSharedModule, LCUServiceSettings, MaterialModule } from '@lcu/common';
 import { environment } from '../environments/environment';
 import {
   LandingPagesModule,
@@ -15,14 +15,23 @@ import {
   SELECTOR_LANDING_PAGES_CALL_TO_ACTION_ELEMENT,
 } from '@lowcodeunit/landing-pages-common';
 import { createCustomElement } from '@angular/elements';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AppHostModule } from '@lowcodeunit/app-host-common';
+import { LazyElementModule } from '@lowcodeunit/lazy-element';
 
 @NgModule({
   declarations: [],
   imports: [
-    BrowserModule,
+    FathymSharedModule.forRoot(),
     BrowserAnimationsModule,
-    FathymSharedModule,
-    LandingPagesModule.forRoot(),
+    HttpClientModule,
+    MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
+    LandingPagesModule,
+    AppHostModule,
+    LazyElementModule.forRoot(),
   ],
   providers: [
     {
