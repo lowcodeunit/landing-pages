@@ -9,6 +9,7 @@ import { LandingPagesHeroElementComponent } from './controls/hero/hero.component
 import { LandingPagesInfoCardElementComponent } from './controls/info-card/info-card.component';
 import { LandingPagesInfoCardsElementComponent } from './controls/info-cards/info-cards.component';
 import { LandingPagesCallToActionElementComponent } from './controls/call-to-action/call-to-action.component';
+import { LazyElementModule } from '@lowcodeunit/lazy-element';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LandingPagesCallToActionElementComponent } from './controls/call-to-act
     FlexLayoutModule,
     MaterialModule,
     AppHostModule,
+    LazyElementModule,
   ],
   exports: [
     LandingPagesBlocksElementComponent,

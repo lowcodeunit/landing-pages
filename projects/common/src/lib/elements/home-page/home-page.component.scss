@@ -3,6 +3,19 @@
 $orange: #f12711;
 $hero-bg-color: rgb(26, 20, 32);
 
+.with-background {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 :host ::ng-deep {
   overflow: auto;
   display: block;
@@ -18,107 +31,128 @@ $hero-bg-color: rgb(26, 20, 32);
     @extend .margin-bottom-0;
   }
 
-  .hero-container {
-    position: relative;
-    min-height: 500px;
+  .header-container {
+    .hero-container {
+      position: relative;
+      min-height: 500px;
+      @extend .margin-bottom-5;
 
-    .hero-header {
-      max-width: 1000px;
-      margin: auto;
-      @extend .padding-5;
-      @extend .flex-row;
-      align-items: center;
-      justify-content: center;
+      .hero-header {
+        // max-width: 1000px;
+        margin: auto;
+        @extend .padding-5;
+        @extend .flex-row;
+        @extend .flex-row-center;
 
-      .divider-fill-hor {
-        display: none;
-        background-color: mat-color($accent, 700);
-      }
+        .divider-fill-hor {
+          display: none;
+          background-color: mat-color($accent, 700);
+        }
 
-      .hero-content {
-        width: 40%;
-        max-width: 350px;
-        min-width: 300px;
-        @extend .margin-right-5;
+        .hero-content {
+          width: 60%;
+          min-width: 300px;
+          @extend .margin-right-5;
 
-        .title {
-          @extend .flex-column;
+          .title {
+            max-width: 550px;
+            @extend .flex-column;
 
-          .main {
-            display: inline-block;
-            color: mat-color($accent);
-            @extend .mat-display-3;
-            @extend .margin-0;
-            @extend .margin-bottom-2;
-            @extend .margin-right-2;
+            .main {
+              display: inline-block;
+              color: $white;
+              // color: mat-color($accent);
+              @extend .mat-display-3;
+              @extend .margin-0;
+              @extend .margin-bottom-2;
+              @extend .margin-right-2;
+            }
+
+            .sub {
+              color: $white;
+              @extend .mat-display-1;
+              @extend .margin-0;
+            }
           }
 
-          .sub {
+          .tagline {
             color: $white;
-            @extend .mat-display-1;
-            @extend .margin-0;
+            max-width: 400px;
+            @extend .mat-title;
+            @extend .padding-top-4;
+            @extend .padding-right-3;
+            @extend .padding-bottom-3;
+            // font-weight: 900;
+            // -webkit-text-stroke-width: 1px;
+            // -webkit-text-stroke-color: mat-color($primary);
+          }
+
+          .hero-action {
+            display: block;
+            @extend .margin-top-3;
+
+            .mat-button-base {
+              color: $white;
+              background-color: #ff9800;
+              @extend .mat-button-large;
+            }
           }
         }
 
-        .tagline {
-          font-size: 1em;
-          font-weight: 900;
-          color: $white;
-          -webkit-text-stroke-width: 1px;
-          -webkit-text-stroke-color: mat-color($primary);
-          @extend .padding-top-4;
-          @extend .padding-right-3;
-          @extend .padding-bottom-3;
-          // background-color: mat-color($primary);
-        }
+        .hero-image {
+          width: 450px;
+          height: 450px;
+          position: absolute;
+          top: 200px;
+          right: 10%;
+          @extend .padding-0;
+          @extend .margin-0;
+          @extend .margin-left-5;
 
-        .hero-action {
-          display: block;
-          @extend .margin-top-3;
-
-          .mat-button-base {
-            color: $black;
-            @extend .mat-button-large;
+          img {
+            width: 100%;
+            height: 100%;
           }
         }
       }
 
-      .hero-image {
-        width: 40%;
-        min-width: 300px;
-        overflow: hidden;
-        @extend .padding-0;
-        @extend .margin-0;
-        @extend .margin-left-5;
-
-        img {
-          width: 100%;
-          height: 100%;
-        }
+      .hero-background {
+        @extend .with-background;
       }
     }
 
-    .hero-background {
-      position: absolute;
-      display: block;
-      height: 100%;
-      width: 100%;
-      top: 0;
-      overflow: hidden;
-      background-color: mat-color($primary);
-      z-index: -1;
+    .call-to-action {
+      // position: relative;
+      text-align: center;
+      min-height: 500px;
+      margin: auto;
+      overflow: auto;
+      @extend .padding-5;
 
-      &:before {
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        background-image: -webkit-linear-gradient(
-          -75deg,
-          mat-color($primary) 50%,
-          white 50%
-        );
+      &.restricted {
+        width: 80%;
+        max-width: 1000px;
+      }
+      .call-to-action-container {
+        .content {
+          @extend .margin-top-5;
+          @extend .margin-bottom-5;
+
+          .message {
+            color: mat-color($accent, 900);
+            @extend .mat-display-1;
+          }
+        }
+
+        .cta-image {
+          width: 100%;
+          filter: drop-shadow(0 0 15px #333);
+          @extend .mat-round;
+        }
+      }
+
+      .cta-background {
+        @extend .with-background;
       }
     }
   }
@@ -126,7 +160,6 @@ $hero-bg-color: rgb(26, 20, 32);
   .main-container {
     font-size: 1.75em;
     @extend .margin-top-3;
-    @extend .margin-bottom-3;
 
     .inner-container {
       width: 100%;
@@ -134,7 +167,7 @@ $hero-bg-color: rgb(26, 20, 32);
 
     .card-container {
       width: 90%;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
       @extend .margin-bottom-5;
 
@@ -144,12 +177,13 @@ $hero-bg-color: rgb(26, 20, 32);
         box-shadow: none;
         @extend .margin-top-5;
         @extend .flex-row;
+        @extend .flex-row-center;
 
         .icon {
           border-radius: 5px;
           filter: drop-shadow(0 0 15px #333);
           text-align: center;
-          @extend .margin-x-4;
+          @extend .margin-x-5;
 
           .mat-icon {
             color: $white;
@@ -163,14 +197,16 @@ $hero-bg-color: rgb(26, 20, 32);
           @extend .margin-4;
           @extend .margin-top-5;
 
-          h3 {
+          .title {
             color: mat-color($primary);
             @extend .mat-display-2;
             @extend .margin-bottom-1;
           }
 
-          p {
+          .info {
             color: $black;
+            max-width: 400px;
+            @extend .mat-title;
           }
         }
       }
@@ -183,20 +219,29 @@ $hero-bg-color: rgb(26, 20, 32);
     }
 
     .call-to-action {
+      position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
-      min-height: 300px;
+      min-height: 600px;
       color: $white;
+      overflow: auto;
       border-top-left-radius: 2em;
       border-top-right-radius: 2em;
-      background-color: mat-color($primary);
+      // background: linear-gradient(
+      //   to top,
+      //   mat-color($primary),
+      //   mat-color($accent, 700)
+      // );
 
       .call-to-action-container {
         width: 80%;
-        max-width: 800px;
+        max-width: 1000px;
         margin: auto;
+        margin-top: 13em;
+        @extend .padding-bottom-4;
         @extend .flex-row;
+        @extend .flex-row-center;
 
         .content {
           width: 50%;
@@ -204,14 +249,19 @@ $hero-bg-color: rgb(26, 20, 32);
         }
 
         .cta-action {
-          margin: auto;
+          margin: auto 2em;
 
           .mat-button-base {
             text-align: center;
-            color: $black;
+            color: $white;
+            background-color: #ff9800;
             @extend .mat-button-large;
           }
         }
+      }
+
+      .cta-background {
+        @extend .with-background;
       }
     }
   }
@@ -219,39 +269,53 @@ $hero-bg-color: rgb(26, 20, 32);
 
 .home-page.lt-md ::ng-deep,
 .home-page.lt-sm ::ng-deep {
-  .hero-container {
-    min-height: 500px;
+  .header-container {
+    .hero-container {
+      .hero-header {
+        .hero-content {
+          min-width: 250px;
 
-    .hero-header {
-      .hero-content {
-        min-width: 250px;
+          .title {
+            .main {
+              display: block;
+              @extend .mat-display-2;
+              @extend .margin-right-0;
+            }
 
-        .title {
-          .main {
-            display: block;
-            @extend .mat-display-2;
-            @extend .margin-right-0;
-          }
-
-          .sub {
-            display: block;
+            .sub {
+              display: block;
+            }
           }
         }
-      }
 
-      .hero-image {
-        min-width: 250px;
+        .hero-image {
+          min-width: 250px;
+        }
+      }
+    }
+
+    .call-to-action {
+      .content {
+        .message {
+          @extend .mat-headline;
+        }
       }
     }
   }
 
   .main-container {
     .card-container {
+      margin: auto;
+
       .card {
         @extend .margin-top-3;
 
+        .icon {
+          @extend .margin-x-4;
+        }
+
         .content {
-          h3 {
+          .title {
             // @extend .mat-display-1;
           }
         }
@@ -261,18 +325,26 @@ $hero-bg-color: rgb(26, 20, 32);
 }
 
 .home-page.lt-md ::ng-deep {
-  .hero-container {
-    .hero-header {
+  .header-container {
+    .hero-container {
+      .hero-header {
+        @extend .padding-4;
+
+        .hero-content {
+          width: 85%;
+          @extend .margin-right-3;
+        }
+
+        .hero-image {
+          width: 350px;
+          height: 350px;
+          @extend .margin-left-3;
+        }
+      }
+    }
+
+    .call-to-action {
       @extend .padding-4;
-
-      .hero-content {
-        width: 85%;
-        @extend .margin-right-3;
-      }
-
-      .hero-image {
-        @extend .margin-left-3;
-      }
     }
   }
 
@@ -292,61 +364,89 @@ $hero-bg-color: rgb(26, 20, 32);
         .content {
           min-width: 350px;
         }
+
+        .cta-image {
+          filter: drop-shadow(0 0 11px #333);
+        }
       }
     }
   }
 }
 
 .home-page.lt-sm ::ng-deep {
-  .hero-container {
-    min-height: 300px;
+  .header-container {
+    .hero-container {
+      .hero-header {
+        @extend .padding-3;
+        @extend .padding-top-5;
+        @extend .flex-column;
 
-    .hero-header {
-      @extend .padding-3;
-      @extend .padding-top-5;
-      @extend .flex-column;
+        .hero-content {
+          width: 100%;
+          min-width: 250px;
+          text-align: center;
+          @extend .margin-right-0;
+          @extend .margin-bottom-5;
 
-      .hero-content {
-        width: 100%;
-        min-width: 250px;
-        text-align: center;
-        @extend .margin-right-0;
-        @extend .margin-bottom-5;
+          .title {
+            .main {
+              display: inline-block;
+            }
 
-        .title {
-          .main {
-            display: inline-block;
+            .sub {
+              font-size: 1.5em;
+            }
           }
 
-          .sub {
-            font-size: 1.5em;
+          .tagline {
+            margin: auto;
+          }
+
+          .hero-action {
+            .mat-button {
+              text-align: center;
+            }
           }
         }
 
-        .tagline {
-          @extend .padding-left-3;
-        }
-
-        .hero-action {
-          .mat-button {
-            text-align: center;
-          }
+        .hero-image {
+          position: relative;
+          top: unset;
+          right: unset;
+          @extend .margin-top-4;
+          @extend .margin-left-0;
         }
       }
 
       .hero-image {
-        @extend .margin-top-4;
-        @extend .margin-left-0;
+        width: 90%;
+        height: 300px;
+        @extend .margin-left-3;
+      }
+
+      .hero-background {
+        &:before {
+          background-image: -webkit-linear-gradient(
+            -75deg,
+            mat-color($primary) 75%,
+            white 75%
+          );
+        }
       }
     }
 
-    .hero-background {
-      &:before {
-        background-image: -webkit-linear-gradient(
-          -75deg,
-          mat-color($primary) 75%,
-          white 75%
-        );
+    .call-to-action {
+      width: 95%;
+      @extend .padding-3;
+
+      .content {
+        .message {
+          @extend .mat-title;
+        }
+      }
+
+      .cta-image {
+        filter: drop-shadow(0 0 7px #333);
       }
     }
   }
@@ -355,10 +455,6 @@ $hero-bg-color: rgb(26, 20, 32);
     .card-container {
       .card {
         @extend .flex-column;
-
-        .icon {
-          @extend .margin-right-0;
-        }
       }
 
       &:nth-child(2n) {

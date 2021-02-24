@@ -50,22 +50,3 @@ html {
   height: $divider-size;
   width: 100%;
 }
-
-.flex-column {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-}
-
-.flex-row {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-}
-
-.mat-button-large {
-  line-height: 48px;
-  font-size: 18px;
-  font-weight: 700;
-  padding: 0 24px !important;
-}

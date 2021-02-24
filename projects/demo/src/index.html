@@ -12,55 +12,104 @@
     />
 
     <script id="lcu-reg">
-      const blocksLanding = {
-        CallToAction: {
-          Action: {
-            Text: "Sign up today",
-            Target: "_blank",
-            Path: "#",
-            Raised: true,
-            Color: "primary",
+        const blocksLanding = {
+          CallToAction: {
+            Action: {
+              Text: "Sign up today",
+              Target: "_blank",
+              Path: "#",
+              Raised: true,
+              Color: "primary",
+            },
+            Message:
+              "To learn how fathym can save your brewery thousands of dollars in time and lost product.",
           },
-          Message:
-            "To learn how fathym can save your brewery thousands of dollars in time and lost product.",
-        },
-        Hero: {
-          BackgroundImage:
-            "assets/images/daniel-vogel-sVothhm7iRI-unsplash.jpg",
-          Message:
-            "Helps breweries develop solutions that can add a significant level of insight and reliability to brewing",
-          SubTitle: "for Breweries",
-          Title: "IoT Ensemble",
-        },
-        InfoCards: [
-          {
-            Icon: "backup",
-            Info:
-              "Connect sensors to IoT Ensemble and collect real-time data in the cloud.",
-            Title: "Connect Sensors",
+          Hero: {
+            BackgroundImage:
+              "assets/images/daniel-vogel-sVothhm7iRI-unsplash.jpg",
+            Message:
+              "Helps breweries develop solutions that can add a significant level of insight and reliability to brewing",
+            SubTitle: "for Breweries",
+            Title: "IoT Ensemble",
           },
-          {
-            Icon: "insert_chart",
-            Info:
-              "Easily access data for use in 3rd party dashboards and reports.",
-            Title: "Access Data",
-          },
-        ],
-      };
+          InfoCards: [
+            {
+              Icon: "backup",
+              Info:
+                "Connect sensors to IoT Ensemble and collect real-time data in the cloud.",
+              Title: "Connect Sensors",
+            },
+            {
+              Icon: "insert_chart",
+              Info:
+                "Easily access data for use in 3rd party dashboards and reports.",
+              Title: "Access Data",
+            },
+          ],
+        };
 
-      window.LCU = {
-        // APIRoot: "https://localhost:44387",
-        APIRoot: "https://www.fathym-int.com",
-        Application: {},
-        State: {
-          ActionRoot: "/api/state",
-          Root: "/api/state",
-          // Environment: 'local',
-          UsernameMock: "michael.gearhardt@fathym.com",
-          LandingPage: blocksLanding,
-        },
-        Settings: {},
-      };
+        window.LCU = {
+          // APIRoot: "https://localhost:44387",
+          APIRoot: "https://www.fathym-int.com",
+          Application: {},
+          State: {
+            ActionRoot: "/api/state",
+            Root: "/api/state",
+            // Environment: 'local',
+            UsernameMock: "michael.gearhardt@fathym.com",
+            LandingPage: blocksLanding,
+            Billing: {
+              BillingPlansAPIPath:
+                'https://www.iot-ensemble.com/api/state/usermanagement/ListBillingOptions?licenseType=iot',
+              BillingPlanOptions: [
+                {
+                  ContactText: '',
+                  DiscountedFrom: 0,
+                  Interval: 'month',
+                  Lookup: 'price_1HhIDIEoSnTpuGWGokN2x6wq',
+                  Name: 'IoT - Free ',
+                  PlanGroup: 'Free',
+                  Price: 0,
+                  Priority: 0,
+                  LicenseType: 'iot',
+                  Popular: 'true',
+                  SuccessRedirect: 'https://www.iot-ensemble.com/dashboard',
+                  Devices: '1',
+                  DataInterval: '60',
+                  DataRetention: '259200',
+                  HeaderName: 'Fathym | IoT Ensemble',
+                  LicenseName: 'Fathym IoT',
+                  PlanFeatures:
+                    'IoT Management|Shared Cloud|1 Device|60 second Data Velocity|3 Days of Data Retention',
+                  TrialPeriodDays: 0,
+                },
+                {
+                  ContactText: 'Contact sales for pricing information',
+                  DiscountedFrom: '0',
+                  Interval: 'month',
+                  Lookup: 'price_1HhIGXEoSnTpuGWGwN29a2zo',
+                  Name: 'IoT - Enterprise ',
+                  PlanGroup: 'Enterprise',
+                  Price: '10',
+                  Priority: '40',
+                  LicenseType: 'iot',
+                  Featured: 'true',
+                  SuccessRedirect: 'https://www.iot-ensemble.com/dashboard',
+                  Devices: '50',
+                  DataInterval: 80,
+                  DataRetention: '604800',
+                  HeaderName: 'Fathym | IoT Ensemble',
+                  LicenseName: 'Fathym IoT',
+                  PlanFeatures:
+                    'IoT Management|Private Cloud|Unlimited Devices|30 second Data Velocity|7 Days of Data Retention',
+                  TrialPeriodDays: 0,
+                },
+              ],
+              State: null,
+            }
+          },
+          Settings: {},
+        };
     </script>
   </head>
   <body>
