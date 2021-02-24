@@ -283,9 +283,136 @@
           }
         }
       }
+    },
+    "lcu-parts": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "projects/lcu-parts",
+      "sourceRoot": "projects/lcu-parts/src",
+      "prefix": "lcu",
+      "architect": {
+        "build": {
+          "builder": "ngx-build-plus:browser",
+          "options": {
+            "outputPath": "dist/lcu-parts",
+            "index": "projects/lcu-parts/src/index.html",
+            "main": "projects/lcu-parts/src/main.ts",
+            "polyfills": "projects/lcu-parts/src/polyfills.ts",
+            "tsConfig": "projects/lcu-parts/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/lcu-parts/src/favicon.ico",
+              {
+                "glob": "package.json",
+                "input": "./projects/lcu-parts/",
+                "output": "/"
+              },
+              {
+                "glob": "lcu.json",
+                "input": "./",
+                "output": "/"
+              }
+            ],
+            "styles": [
+              "projects/lcu-parts/src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/@webcomponents/custom-elements/src/native-shim.js",
+              {
+                "bundleName": "polyfill-webcomp-es5",
+                "input": "node_modules/@webcomponents/webcomponentsjs/custom-elements-es5-adapter.js"
+              },
+              {
+                "bundleName": "polyfill-webcomp",
+                "input": "node_modules/@webcomponents/webcomponentsjs/bundles/webcomponents-sd-ce-pf.js"
+              }
+            ]
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/lcu-parts/src/environments/environment.ts",
+                  "with": "projects/lcu-parts/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "ngx-build-plus:dev-server",
+          "options": {
+            "browserTarget": "lcu-parts:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "lcu-parts:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "lcu-parts:build"
+          }
+        },
+        "test": {
+          "builder": "ngx-build-plus:karma",
+          "options": {
+            "main": "projects/lcu-parts/src/test.ts",
+            "polyfills": "projects/lcu-parts/src/polyfills.ts",
+            "tsConfig": "projects/lcu-parts/tsconfig.spec.json",
+            "karmaConfig": "projects/lcu-parts/karma.conf.js",
+            "assets": [
+              "projects/lcu-parts/src/favicon.ico",
+              "projects/lcu-parts/src/assets"
+            ],
+            "styles": [
+              "projects/lcu-parts/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/lcu-parts/tsconfig.app.json",
+              "projects/lcu-parts/tsconfig.spec.json",
+              "projects/lcu-parts/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/lcu-parts/e2e/protractor.conf.js",
+            "devServerTarget": "lcu-parts:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "lcu-parts:serve:production"
+            }
+          }
+        }
+      }
     }
   },
-  "defaultProject": "lcu",
+  "defaultProject": "demo",
   "cli": {
     "analytics": "4b6401b4-7f6b-48bf-a7b9-fe75553541e8"
   }

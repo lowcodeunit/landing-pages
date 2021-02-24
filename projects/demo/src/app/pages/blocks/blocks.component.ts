@@ -30,7 +30,7 @@ export class BlocksComponent implements OnInit {
           'To learn how fathym can save your brewery thousands of dollars in time and lost product.',
       },
       Hero: {
-        BackgroundImage: 'assets/images/daniel-vogel-sVothhm7iRI-unsplash.jpg',
+        BackgroundImage: 'url(./assets/images/daniel-vogel-sVothhm7iRI-unsplash.jpg)',
         Message:
           'Helps breweries develop solutions that can add a significant level of insight and reliability to brewing',
         SubTitle: 'for Breweries',

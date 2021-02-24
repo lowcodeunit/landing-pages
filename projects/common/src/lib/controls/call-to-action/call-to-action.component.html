@@ -1,15 +1,39 @@
-<div class="call-to-action" *ngIf="Context">
+<div
+  class="call-to-action"
+  [class.restricted]="Context.IsRestricted"
+  *ngIf="Context"
+>
   <div class="call-to-action-container">
-    <div class="content">
-      <h2 class="title">{{ Context.Title }}</h2>
+    <div class="content" *ngIf="Context.Title || Context.Message">
+      <h2 class="title" *ngIf="Context.Title">{{ Context.Title }}</h2>
 
-      <p class="message">{{ Context.Message }}</p>
+      <p class="message" *ngIf="Context.Message">{{ Context.Message }}</p>
     </div>
 
     <lcu-action
       class="cta-action"
       [action]="Context.Action"
       (action-click)="ActionClicked($event)"
+      *ngIf="Context.Action"
     ></lcu-action>
+
+    <img
+      class="cta-image"
+      [src]="Context.Image"
+      [alt]="Context.Title || Context.Message || 'Call to Action'"
+      *ngIf="Context.Image"
+    />
+
+    <lcu-lazy-elements
+      class="cta-elements"
+      [elements]="Context.Elements"
+      [configs]="Context.ElementConfigs"
+    ></lcu-lazy-elements>
+
+    <div
+      class="cta-background"
+      [style.background-image]="Context.BackgroundImage"
+      *ngIf="Context.BackgroundImage"
+    ></div>
   </div>
 </div>
