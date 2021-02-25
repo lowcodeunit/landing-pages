@@ -20,7 +20,7 @@ export class LandingPagesBlocksElementComponent
   //  Constructors
   constructor(
     protected injector: Injector,
-    protected settings: LCUServiceSettings
+    // protected settings: LCUServiceSettings
   ) {
     super(injector);
   }
@@ -29,15 +29,15 @@ export class LandingPagesBlocksElementComponent
   public ngOnInit() {
     super.ngOnInit();
 
-    if (!this.Context) {
-      this.setContext();
-    }
+    // if (!this.Context) {
+    //   this.setContext();
+    // }
   }
 
   //  API Methods
 
   //  Helpers
   protected setContext(): void {
-    this.Context = this.settings.State.LandingPage;
+    // this.Context = this.settings.State.LandingPage;
   }
 }

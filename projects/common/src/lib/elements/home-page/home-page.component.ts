@@ -1,4 +1,10 @@
-import { Component, OnInit, Injector, HostBinding } from '@angular/core';
+import {
+  Component,
+  OnChanges,
+  OnInit,
+  Injector,
+  HostBinding,
+} from '@angular/core';
 import {
   LCUElementContext,
   LcuElementComponent,
@@ -16,7 +22,7 @@ export const SELECTOR_LANDING_PAGES_HOME_PAGE_ELEMENT =
 })
 export class LandingPagesHomePageElementComponent
   extends LcuElementComponent<LandingPagesHomePageContext>
-  implements OnInit {
+  implements OnChanges, OnInit {
   //  Fields
 
   //  Properties
@@ -30,6 +36,16 @@ export class LandingPagesHomePageElementComponent
   }
 
   //  Life Cycle
+  public ngOnChanges() {
+    if (this.Context && this.Context?.CallToAction) {
+      this.Context.CallToAction.ElementConfigs = this.Context.ElementConfigs;
+    }
+
+    if (this.Context && this.Context?.HeroCallToAction) {
+      this.Context.HeroCallToAction.ElementConfigs = this.Context.ElementConfigs;
+    }
+  }
+
   public ngOnInit() {
     super.ngOnInit();
 
@@ -42,7 +58,7 @@ export class LandingPagesHomePageElementComponent
 
   //  Helpers
   protected setContext(): void {
-    this.Context = this.settings.State.LandingPage;
+    // this.Context = this.settings.State.LandingPage;
 
     this.Context.CallToAction.ElementConfigs = this.Context.HeroCallToAction.ElementConfigs = this.Context.ElementConfigs;
   }

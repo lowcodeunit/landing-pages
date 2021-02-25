@@ -26,7 +26,7 @@
 		"pack:lcu-parts:pollyfills": "concat-glob-cli -f \"dist/lcu-parts/scripts.*.js\" -o dist/lcu-parts/wc/lcu.pollyfills.js",
 		"pack:lcu-parts:styles": "concat-glob-cli -f \"dist/lcu-parts/wc/styles.*.css\" -o dist/lcu-parts/wc/landing-pages.lcu.css",
 		"start": "npm run start:demo",
-		"start:demo": "ng serve demo --port=4203 --aot=false",
+		"start:demo": "ng serve demo --port=4203",
 		"build": "npm run build:common && npm run build:lcu",
 		"test": "ng test",
 		"lint": "ng lint",
