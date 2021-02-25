@@ -19,6 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppHostModule } from '@lowcodeunit/app-host-common';
 import { LazyElementModule } from '@lowcodeunit/lazy-element';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [],
@@ -30,6 +31,7 @@ import { LazyElementModule } from '@lowcodeunit/lazy-element';
     ReactiveFormsModule,
     FormsModule,
     LandingPagesModule,
+    RouterModule.forRoot([]),
     AppHostModule,
     LazyElementModule.forRoot(),
   ],

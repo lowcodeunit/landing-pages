@@ -3,7 +3,11 @@ import { SELECTOR_LANDING_PAGES_INFO_CARDS_ELEMENT } from '@lowcodeunit/landing-
 import { NgModule, DoBootstrap, Injector } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FathymSharedModule, LCUServiceSettings, MaterialModule } from '@lcu/common';
+import {
+  FathymSharedModule,
+  LCUServiceSettings,
+  MaterialModule,
+} from '@lcu/common';
 import { environment } from '../environments/environment';
 import {
   LandingPagesModule,
@@ -17,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppHostModule } from '@lowcodeunit/app-host-common';
 import { LazyElementModule } from '@lowcodeunit/lazy-element';
+import { RouterModule, Routes } from '@angular/router';
 
 @NgModule({
   declarations: [],
@@ -27,6 +32,7 @@ import { LazyElementModule } from '@lowcodeunit/lazy-element';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,
+    RouterModule.forRoot([]),
     LandingPagesModule,
     AppHostModule,
     LazyElementModule.forRoot(),

@@ -28,10 +28,7 @@ export class LandingPagesHomePageElementComponent
   //  Properties
 
   //  Constructors
-  constructor(
-    protected injector: Injector,
-    protected settings: LCUServiceSettings
-  ) {
+  constructor(protected injector: Injector) {
     super(injector);
   }
 
