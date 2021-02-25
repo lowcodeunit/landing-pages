@@ -14,13 +14,16 @@ export class LandingPagesHeroElementComponent
   extends LcuElementComponent<LandingPagesHeroContext>
   implements OnChanges, OnInit {
   //  Fields
+  protected sanitizer: DomSanitizer;
 
   //  Properties
   public BackgroundColorStyle: SafeHtml;
 
   //  Constructors
-  constructor(protected injector: Injector, protected sanitizer: DomSanitizer) {
+  constructor(protected injector: Injector) {
     super(injector);
+
+    this.sanitizer = injector.get(DomSanitizer);
   }
 
   //  Life Cycle

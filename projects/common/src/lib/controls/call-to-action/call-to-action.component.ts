@@ -16,13 +16,16 @@ export class LandingPagesCallToActionElementComponent
   extends LcuElementComponent<LandingPagesCallToActionContext>
   implements OnChanges, OnInit {
   //  Fields
+  protected sanitizer: DomSanitizer;
 
   //  Properties
   public BackgroundColorStyle: SafeHtml;
 
   //  Constructors
-  constructor(protected injector: Injector, protected sanitizer: DomSanitizer) {
+  constructor(protected injector: Injector) {
     super(injector);
+
+    // this.sanitizer = injector.get(DomSanitizer);
   }
 
   //  Life Cycle
@@ -40,28 +43,28 @@ export class LandingPagesCallToActionElementComponent
 
   //  Helpers
   protected setBackgroundColorStyle() {
-    if (this.Context?.BackgroundColor) {
-      this.BackgroundColorStyle = this.sanitizer.bypassSecurityTrustHtml(`
-      <style>
-        .hero-background:before {
-          background-image: -webkit-linear-gradient(
-            -75deg,
-            ${this.Context.BackgroundColor} 50%,
-            white 50%
-          ) !important;
-        }
+    // if (this.Context?.BackgroundColor) {
+    //   this.BackgroundColorStyle = this.sanitizer.bypassSecurityTrustHtml(`
+    //   <style>
+    //     .hero-background:before {
+    //       background-image: -webkit-linear-gradient(
+    //         -75deg,
+    //         ${this.Context.BackgroundColor} 50%,
+    //         white 50%
+    //       ) !important;
+    //     }
 
-        .lt-sm .hero-background:before {
-          background-image: -webkit-linear-gradient(
-            -75deg,
-            ${this.Context.BackgroundColor} 75%,
-            white 75%
-          ) !important;
-        }
-      </style>
-      `);
-    } else {
-      this.BackgroundColorStyle = '';
-    }
+    //     .lt-sm .hero-background:before {
+    //       background-image: -webkit-linear-gradient(
+    //         -75deg,
+    //         ${this.Context.BackgroundColor} 75%,
+    //         white 75%
+    //       ) !important;
+    //     }
+    //   </style>
+    //   `);
+    // } else {
+    //   this.BackgroundColorStyle = '';
+    // }
   }
 }
