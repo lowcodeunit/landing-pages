@@ -37,6 +37,19 @@ export class LandingPagesHomePageElementComponent
 
   //  Life Cycle
   public ngOnChanges() {
+    this.setContext();
+  }
+
+  public ngOnInit() {
+    super.ngOnInit();
+
+    this.setContext();
+  }
+
+  //  API Methods
+
+  //  Helpers
+  protected setContext(): void {
     if (this.Context && this.Context?.CallToAction) {
       this.Context.CallToAction.ElementConfigs = this.Context.ElementConfigs;
     }
@@ -44,22 +57,5 @@ export class LandingPagesHomePageElementComponent
     if (this.Context && this.Context?.HeroCallToAction) {
       this.Context.HeroCallToAction.ElementConfigs = this.Context.ElementConfigs;
     }
-  }
-
-  public ngOnInit() {
-    super.ngOnInit();
-
-    if (!this.Context) {
-      this.setContext();
-    }
-  }
-
-  //  API Methods
-
-  //  Helpers
-  protected setContext(): void {
-    // this.Context = this.settings.State.LandingPage;
-
-    this.Context.CallToAction.ElementConfigs = this.Context.HeroCallToAction.ElementConfigs = this.Context.ElementConfigs;
   }
 }
