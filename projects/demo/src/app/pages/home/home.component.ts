@@ -36,9 +36,15 @@ export class HomeComponent implements OnInit {
         Message:
           'Modular and reusable components and tools that help your team deliver repeatable, low-code solutions.',
         // Image: './assets/images/fathym-cloud-dashboard.png',
-        Elements: [
-          { Name: 'lcu-billing-plan-view-element', StateKey: 'Billing' },
-        ],
+        // Elements: [
+        //   {
+        //     Name: 'lcu-billing-plan-view-element',
+        //     StateKey: 'Billing',
+        //     ActionKeys: { 'buy-now-click': 'Pricing.BuyNowClick' },
+        //   },
+        // ],
+        IsRestricted: true,
+        YoutubeVideoID: 'hQaVqLzAmIM',
       },
       // HeroCallToAction: {
       //   Message:
