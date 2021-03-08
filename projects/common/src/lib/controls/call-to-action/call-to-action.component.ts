@@ -36,6 +36,20 @@ export class LandingPagesCallToActionElementComponent
   public ngOnInit() {
     super.ngOnInit();
 
+    let tag = document.getElementById(
+      'lcu-youtube-iframe-api'
+    ) as HTMLScriptElement;
+
+    if (!tag) {
+      tag = document.createElement('script');
+
+      tag.src = 'https://www.youtube.com/iframe_api';
+
+      tag.id = 'lcu-youtube-iframe-api';
+
+      document.body.appendChild(tag);
+    }
+
     this.setBackgroundColorStyle();
   }
 
@@ -53,7 +67,6 @@ export class LandingPagesCallToActionElementComponent
     //         white 50%
     //       ) !important;
     //     }
-
     //     .lt-sm .hero-background:before {
     //       background-image: -webkit-linear-gradient(
     //         -75deg,

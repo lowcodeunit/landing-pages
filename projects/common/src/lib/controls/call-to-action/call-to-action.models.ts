@@ -46,4 +46,10 @@ export class LandingPagesCallToActionContext extends LCUElementContext<LandingPa
    * Message to entice a call to action
    */
   public Title?: string;
+
+  /**
+   * The video to use
+   */
+  public YoutubeVideoID?: string;
+
 }

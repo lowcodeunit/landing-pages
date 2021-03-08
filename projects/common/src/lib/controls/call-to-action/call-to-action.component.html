@@ -24,6 +24,13 @@
       *ngIf="Context.Image"
     />
 
+    <youtube-player
+      [videoId]="Context.YoutubeVideoID"
+      suggestedQuality="highres"
+      width="100%"
+    >
+    </youtube-player>
+
     <lcu-lazy-elements
       class="cta-elements"
       [elements]="Context.Elements"

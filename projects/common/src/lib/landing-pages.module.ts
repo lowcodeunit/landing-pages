@@ -10,6 +10,7 @@ import { LandingPagesInfoCardElementComponent } from './controls/info-card/info-
 import { LandingPagesInfoCardsElementComponent } from './controls/info-cards/info-cards.component';
 import { LandingPagesCallToActionElementComponent } from './controls/call-to-action/call-to-action.component';
 import { LazyElementModule } from '@lowcodeunit/lazy-element';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { LazyElementModule } from '@lowcodeunit/lazy-element';
     MaterialModule,
     AppHostModule,
     LazyElementModule,
+    YouTubePlayerModule
   ],
   exports: [
     LandingPagesBlocksElementComponent,
