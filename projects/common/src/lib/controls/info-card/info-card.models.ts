@@ -11,7 +11,7 @@ export class LandingPagesInfoCardContext extends LCUElementContext<LandingPagesI
   /**
    * Message / string of content
    */
-  public Info: string;
+  public Info?: string;
 
   /**
    * When using an SVG for mat-icon
