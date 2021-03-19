@@ -1,7 +1,8 @@
 <mat-card class="card" *ngIf="Context">
   <div class="icon">
     <mat-icon *ngIf="!Context.SVGIcon">{{ Context.Icon }}</mat-icon>
-    <mat-icon *ngIf="Context.SVGIcon" [svgIcon]="Context.SVGIcon"></mat-icon>
+    <img [src]="Context.SVGIcon" *ngIf="Context.SVGIcon" />
+    <!-- <mat-icon *ngIf="Context.SVGIcon" [svgIcon]="Context.SVGIcon"></mat-icon> -->
   </div>
 
   <div class="content">

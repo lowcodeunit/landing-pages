@@ -1,6 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatIconRegistry } from '@angular/material/icon';
 import { FathymSharedModule, MaterialModule } from '@lcu/common';
 import { AppHostModule } from '@lowcodeunit/app-host-common';
 import { LandingPagesBlocksElementComponent } from './elements/blocks/blocks.component';
@@ -11,6 +12,7 @@ import { LandingPagesInfoCardsElementComponent } from './controls/info-cards/inf
 import { LandingPagesCallToActionElementComponent } from './controls/call-to-action/call-to-action.component';
 import { LazyElementModule } from '@lowcodeunit/lazy-element';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     MaterialModule,
     AppHostModule,
     LazyElementModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    MatIconModule,
   ],
   exports: [
     LandingPagesBlocksElementComponent,
@@ -52,7 +55,7 @@ export class LandingPagesModule {
   static forRoot(): ModuleWithProviders<LandingPagesModule> {
     return {
       ngModule: LandingPagesModule,
-      providers: [],
+      providers: [MatIconRegistry],
     };
   }
 }
