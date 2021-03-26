@@ -1,3 +1,4 @@
+import { SvgToMatIconService, SVGToMatIconModel } from '@lowcodeunit/lcu-icons-common';
 import { Component, OnInit, Injector } from '@angular/core';
 import { LCUElementContext, LcuElementComponent } from '@lcu/common';
 import { LandingPagesInfoCardContext } from '../info-card/info-card.models';
@@ -14,13 +15,24 @@ export class LandingPagesInfoCardsElementComponent extends LcuElementComponent<L
   //  Properties
 
   //  Constructors
-  constructor(protected injector: Injector) {
+  constructor(protected injector: Injector, protected svgToMatIconService: SvgToMatIconService) {
     super(injector);
   }
 
   //  Life Cycle
   public ngOnInit() {
     super.ngOnInit();
+
+    const icons: Array<SVGToMatIconModel> =
+    [
+      { Name: 'svgdownload', IconPath: 'download.svg' },
+      { Name: 'svgphone', IconPath: 'phone.svg' },
+      // { Name: 'accelerate', IconPath: 'accelerate.svg' },
+    ];
+
+    // http://localhost:4200/assets/images/svgs/download.svg
+    // !!raw-loader!.
+    this.svgToMatIconService.SetIcons(icons, './assets/images/svgs/');
   }
 
   //  API Methods
