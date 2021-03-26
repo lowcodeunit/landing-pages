@@ -6,6 +6,6 @@
   <div class="content">
     <h3 class="title">{{ Context.Title }}</h3>
 
-    <p class="info">{{ Context.Info }}</p>
+    <div class="info" [innerHTML]="Context.Info"></div>
   </div>
 </mat-card>
