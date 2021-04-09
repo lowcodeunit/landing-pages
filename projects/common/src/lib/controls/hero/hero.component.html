@@ -24,8 +24,15 @@
       ></lcu-action>
     </div>
 
-    <div class="hero-image" *ngIf="Context.Image">
-      <img [src]="Context.Image" [alt]="Context.Title" />
+    <div 
+    class="hero-image" 
+    [ngClass]="Context.HeroImageStyle"
+    [ngStyle]="{'height': Context.HeroImageHeight, 'width': Context.HeroImageWidth }" 
+    *ngIf="Context.Image">
+      <img 
+      [src]="Context.Image" 
+      [alt]="Context.Title"
+       />
     </div>
   </div>
 
