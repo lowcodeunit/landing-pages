@@ -30,8 +30,13 @@ export class HomeComponent implements OnInit {
           Raised: true,
         },
         Image: './assets/images/fathym-cloud.svg',
-        HeroImageHeight: '600px',
-        HeroImageWidth: '600px',
+        HeroImageStyle: {
+          height: '250px',
+          width: '250px',
+          position: 'absolute',
+          top: '50px',
+          right: '10%'
+        },
         BackgroundImage: 'url(./assets/images/background-wave-fathym.svg)',
       },
       HeroCallToAction: {

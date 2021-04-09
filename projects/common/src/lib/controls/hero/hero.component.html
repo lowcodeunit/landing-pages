@@ -23,10 +23,9 @@
         (action-click)="ActionClicked($event)"
       ></lcu-action>
     </div>
-
     <div 
     class="hero-image" 
-    [ngClass]="Context.HeroImageStyle"
+    [ngStyle]="Context.HeroImageStyle" 
     [ngStyle]="{'height': Context.HeroImageHeight, 'width': Context.HeroImageWidth }" 
     *ngIf="Context.Image">
       <img 

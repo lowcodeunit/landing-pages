@@ -20,19 +20,9 @@ export class LandingPagesHeroContext extends LCUElementContext<LandingPagesHeroE
   public BackgroundColor?: string;
 
   /**
-   * Height of the hero image, will default to set style if not provided
+   * Pass a object to set styles for the hero image
    */
-  public HeroImageHeight?: string;
-
-  /**
-   * Setting an external style for the hero image
-   */
-  public HeroImageStyle?: string;
-
-  /**
-   * Width of the hero image, will default to set style if not provided
-   */
-  public HeroImageWidth?: string;
+  public HeroImageStyle?: object;
 
   /**
    * Image for Hero
