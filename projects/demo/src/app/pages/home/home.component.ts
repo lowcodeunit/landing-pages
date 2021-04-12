@@ -32,7 +32,7 @@ export class HomeComponent implements OnInit {
         Image: './assets/images/pngs/isometric-road.png',
         HeroImageStyle: {
           height: 'auto',
-          'max-width': '800px',
+          'max-width': '621px',
           width: '100%',
           position: 'absolute',
           top: '50px',
