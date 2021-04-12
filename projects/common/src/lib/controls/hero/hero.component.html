@@ -23,9 +23,15 @@
         (action-click)="ActionClicked($event)"
       ></lcu-action>
     </div>
-
-    <div class="hero-image" *ngIf="Context.Image">
-      <img [src]="Context.Image" [alt]="Context.Title" />
+    <div 
+      class="hero-image" 
+      ngStyle.lt-md="{ position: relative }"
+      [ngStyle]="Context.HeroImageStyle" 
+      *ngIf="Context.Image">
+      <img 
+      [src]="Context.Image" 
+      [alt]="Context.Title"
+       />
     </div>
   </div>
 

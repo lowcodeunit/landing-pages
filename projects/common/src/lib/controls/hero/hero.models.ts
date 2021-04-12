@@ -20,6 +20,11 @@ export class LandingPagesHeroContext extends LCUElementContext<LandingPagesHeroE
   public BackgroundColor?: string;
 
   /**
+   * Pass a object to set styles for the hero image
+   */
+  public HeroImageStyle?: object;
+
+  /**
    * Image for Hero
    */
   public Image?: string;
