@@ -29,13 +29,14 @@ export class HomeComponent implements OnInit {
           Color: 'accent',
           Raised: true,
         },
-        Image: './assets/images/fathym-cloud.svg',
+        Image: './assets/images/pngs/isometric-road.png',
         HeroImageStyle: {
-          height: '250px',
-          width: '250px',
+          height: 'auto',
+          'max-width': '800px',
+          width: '100%',
           position: 'absolute',
           top: '50px',
-          right: '10%'
+          right: '5%'
         },
         BackgroundImage: 'url(./assets/images/background-wave-fathym.svg)',
       },
