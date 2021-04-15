@@ -1,5 +1,5 @@
 <div class="hero-container" *ngIf="Context">
-  <div class="hero-header">
+  <div class="hero-header" fxLayout="column">
     <div [innerHTML]="BackgroundColorStyle"></div>
 
     <div class="hero-content">
@@ -23,9 +23,9 @@
         (action-click)="ActionClicked($event)"
       ></lcu-action>
     </div>
-    <div 
+    <div
       class="hero-image" 
-      ngStyle.lt-md="{ position: relative }"
+      ngStyle.lt-lg="{ position: relative }"
       [ngStyle]="Context.HeroImageStyle" 
       *ngIf="Context.Image">
       <img 
